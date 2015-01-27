@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="link" extends="exception" namespace="/link">
+	    <action name="list" class="linkAction" method="getList">
+	    	<result name="success">/admin/link/link_index.jsp</result>
+	    </action>
+
+	    <action name="toAdd" class="linkAction" method="toAdd">
+	    	<result name="success">/admin/link/link_add.jsp</result>
+	    </action>
+	    
+	    <action name="add" class="linkAction" method="add">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    
+	    <action name="show" class="linkAction" method="show">
+	    	<result name="success">/admin/link/link_show.jsp</result>
+	    </action>
+	    
+	    <action name="update" class="linkAction" method="update">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    
+	    <action name="del" class="linkAction" method="del">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+	    
+	     <action name="moreLink" class="linkAction" method="moreLink">
+	    	<result name="success">/admin/link/morelink.jsp</result>
+	    </action>
+
+    </package>
+</struts>

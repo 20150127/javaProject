@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<bean id="userService" class="cn.xyurp.system.service.impl.SysUserServiceImpl">
+		<property name="sysUserDao" ref="sysUserDao"></property>
+		<property name="sysACLDao" ref="sysACLDao"></property>	
+	</bean>  
+	<bean id="roleService" class="cn.xyurp.system.service.impl.SysRoleServiceImpl">
+		<property name="sysRoleDao" ref="sysRoleDao"></property>
+		<property name="sysACLDao" ref="sysACLDao"></property>	
+	</bean> 
+	<bean id="moduleService" class="cn.xyurp.system.service.impl.SysModuleServiceImpl">
+		<property name="sysModuleDao" ref="sysModuleDao"></property>	
+	</bean> 
+	<bean id="sysACLService" class="cn.xyurp.system.service.impl.SysACLServiceImpl">
+		<property name="sysACLDao" ref="sysACLDao"></property>
+	</bean>
+	<bean id="sysLogService"
+		class="cn.xyurp.system.service.impl.SysLogServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<!-- 集合域service -->
+	 <bean id="domainService" class="cn.xyurp.system.service.impl.DomainServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="finalConstant" class="cn.xyurp.system.util.FinalConstant">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<!-- 域值service -->
+	 <bean id="domainValueService" class="cn.xyurp.system.service.impl.DomainValueServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="xbService" class="cn.xyurp.zs.service.impl.XBServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="bylbService" class="cn.xyurp.zs.service.impl.BYLBServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="dqService" class="cn.xyurp.zs.service.impl.DQServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="klService" class="cn.xyurp.zs.service.impl.KLServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="kslbService" class="cn.xyurp.zs.service.impl.KSLBServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="kslxService" class="cn.xyurp.zs.service.impl.KSLXServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="mzService" class="cn.xyurp.zs.service.impl.MZServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="zzmmService" class="cn.xyurp.zs.service.impl.ZZMMServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	
+	<bean id="specialtyService" class="cn.xyurp.zs.service.impl.SpecialtyServiceImpl">
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	
+	<bean id="sysVariableService" class="cn.xyurp.zs.service.impl.SysVariableServiceImpl" >
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	
+	<bean id="examineeService" class="cn.xyurp.zs.service.impl.ExamineeServiceImpl" >
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	
+	<bean id="initSystemDatas" class="cn.xyurp.zs.service.impl.InitSystemDatasImpl" >
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="scoreService" class="cn.xyurp.zs.service.impl.ScoreServiceImpl" >
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	
+	<bean id="noticeService" class="cn.xyurp.zs.service.impl.NoticeServiceImpl" >
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="guestBookService" class="cn.xyurp.zs.service.impl.GuestBookServiceImpl" >
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	<bean id="linkService" class="cn.xyurp.zs.service.impl.LinkServiceImpl" >
+		<property name="commonDao" ref="commonDao"></property>
+	</bean>
+</beans>

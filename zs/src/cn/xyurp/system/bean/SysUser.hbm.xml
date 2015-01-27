@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.xyurp.system.bean">
+    <class name="cn.xyurp.system.bean.SysUser" table="t_sysuser">
+        <id name="id">
+            <generator class="native" />
+        </id>
+        <property name="userName" length="50" not-null="true"/>
+        <property name="account" length="18" />
+        <property name="password" length="20" />
+        <property name="tel" length="15" />
+        <property name="createTime" />
+        <property name="expireTime" />
+        <property name="remark" length="3000" />
+        <many-to-one name="specialty" column="specialtyId" class="cn.xyurp.zs.bean.Specialty"></many-to-one>
+    </class>
+</hibernate-mapping> 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.xyurp.zs.bean">
+    <class name="SysVariable" table="t_zs_sysvariable">
+        <id name="id" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+		<property name="admissionHead" column="admissionHead" length="50" type="java.lang.String"/>
+		<property name="roomNum" column="roomNum" type="java.lang.Integer"/>
+		<property name="roomId" column="roomId" type="java.lang.Integer"/>
+		<property name="pcount" column="pcount" type="java.lang.Integer"/>
+		<property name="registerDate" column="registerDate" type="java.lang.String" length="100"/>
+		<property name="issueDate" column="issueDate" type="java.lang.String" length="100"/>
+		<property name="examDate" column="examDate" type="java.lang.String" length="100"/>
+		<property name="retestsDate" column="retestsDate" type="java.lang.String" length="100"/>
+		<property name="retestsAddress" column="retestsAddress" type="java.lang.String" length="100"/>
+		<property name="registerTitle" column="registerTitle" type="java.lang.String" length="100"/>
+		<property name="admissionTitle" column="admissionTitle" type="java.lang.String" length="100"/>
+		<property name="ifLogin" column="ifLogin" type="java.lang.Integer"/>
+		<property name="ifReg" column="ifReg" type="java.lang.Integer"/>
+		<property name="ifPreliminary" column="ifPreliminary" type="java.lang.Integer"/>
+		<property name="ifRetrial" column="ifRetrial" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.xyurp.zs.bean">
+    <class name="cn.xyurp.zs.bean.Notice" table="t_zs_notice">
+        <id name="id">
+            <generator class="native" />
+        </id>
+        <property name="title" type="java.lang.String" length="100"/>
+        <property name="content" type="java.lang.String" length="5000"/>
+        <property name="issueTime" type="java.lang.String" length="30"/>
+        <property name="issuePerson" type="java.lang.String" length="20"/>
+        <property name="ifissue" type="java.lang.String" length="10"/>
+        <property name="uploadResource" length="5000"/>
+    </class>
+</hibernate-mapping>

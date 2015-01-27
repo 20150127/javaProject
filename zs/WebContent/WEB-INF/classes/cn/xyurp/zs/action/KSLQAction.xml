@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="kslq" extends="exception" namespace="/kslq">
+	    <action name="list" class="kslqAction" method="list">
+	    	<result name="success">/admin/kslq/kslq_index.jsp</result>
+	    </action>
+	    <action name="lq" class="kslqAction" method="lq">
+	    	<result name="success">/pub/lq_success.jsp</result>
+	    </action>
+	    <action name="qx" class="kslqAction" method="qx">
+	    	<result name="success">/pub/qx_success.jsp</result>
+	    </action>
+	    <action name="tz" class="kslqAction" method="tz">
+	    	<result name="success">/admin/kslq/kslq_print.jsp</result>
+	    </action>
+	    <action name="pldy" class="kslqAction" method="pldy">
+	    	<result name="success">/admin/kslq/kslqs_print.jsp</result>
+	    </action>
+  		 <action name="toExport" class="kslqAction" method="toExport">
+			<result name="success">/admin/kslq/toExportExcel.jsp</result>
+		</action>
+	    <action name="export" class="kslqAction" method="export">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel;charset=UTF-8</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+    </package>
+</struts>

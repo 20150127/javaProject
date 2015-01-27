@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.xyurp.system.bean">
+    <class name="cn.xyurp.system.bean.DomainValue" table="t_domainValue">
+        <id name="id">
+            <generator class="native" />
+        </id>
+        <property name="valueName" type="java.lang.String" length="50"/>
+        <property name="remark" length="3000" type="java.lang.String" />
+        <many-to-one name="domain" column="domainId" class="cn.xyurp.system.bean.Domain"></many-to-one> 
+    </class>
+</hibernate-mapping>

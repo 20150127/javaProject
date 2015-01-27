@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="guestBook" extends="exception" namespace="/guestBook">
+	    <action name="list" class="guestBookAction" method="getList">
+	    	<result name="success">/admin/guestBook/guestBook_index.jsp</result>
+	    </action>
+
+	    <action name="toAdd" class="guestBookAction" method="toAdd">
+	    	<result name="success">/admin/guestBook/guestBook_add.jsp</result>
+	    </action>
+	    
+	    <action name="add" class="guestBookAction" method="add">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    
+	    <action name="show" class="guestBookAction" method="show">
+	    	<result name="success">/admin/guestBook/guestBook_show.jsp</result>
+	    </action>
+	    
+	    <action name="update" class="guestBookAction" method="update">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    
+	    <action name="del" class="guestBookAction" method="del">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+
+    </package>
+</struts>

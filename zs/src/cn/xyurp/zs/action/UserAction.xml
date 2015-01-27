@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="us" extends="exception2" namespace="/us">
+	 	<action name="toRegisterCheck" class="userAction" method="toRegisterCheck">
+	 		<result name="success">/user/checkRegister.jsp</result>
+	 		<result name="notRight">/user/notRight.jsp</result>
+	 	</action>
+	 	
+	 	<action name="toRegister" class="userAction" method="toRegister">
+	 		<result name="success">/user/register.jsp</result>
+	 	</action>
+	 	
+	 	<action name="register" class="userAction" method="register">
+	 		<result name="success">/user/register_success.jsp</result>
+	 	</action>
+	 	
+	 	<action name="register" class="userAction" method="register">
+	 		<result name="success">/user/register_success.jsp</result>
+	 	</action>
+	 	
+	 	<action name="toLogin" class="userAction" method="toLogin">
+	 		<result name="success">/login.jsp</result>
+	 	</action>
+	 	
+	 	<action name="exit" class="userAction" method="exit">
+	 		<result name="success">/login.html</result>
+	 	</action>
+	 	
+	 	<action name="login" class="userAction" method="login">
+	 		<result name="success">/user/right.jsp</result>
+	 		<result name="notRight">/user/notRight.jsp</result>
+	 	</action>
+	 	
+	 	<action name="show" class="userAction" method="show">
+	 		<result name="success">/user/user_show.jsp</result>
+	 		<result name="notLogin">/user/notLogin.jsp</result>
+	 	</action>
+	 	
+	 	<action name="toUpdate" class="userAction" method="toUpdate">
+	 		<result name="success">/user/user_update.jsp</result>
+	 		<result name="notLogin">/user/notLogin.jsp</result>
+	 		<result name="notUpdate">/user/notUpdate.jsp</result>
+	 	</action>
+	 	
+	 	<action name="update" class="userAction" method="update">
+	 		<result name="success">/user/update_success.jsp</result>
+	 		<result name="notLogin">/user/notLogin.jsp</result>
+	 	</action>
+	 	
+	 	<action name="toUpdatepwd" class="userAction" method="toUpdatepwd">
+	 		<result name="success">/user/updatepwd.jsp</result>
+	 		<result name="notLogin">/user/notLogin.jsp</result>
+	 	</action>
+	 	
+	 	<action name="updatepwd" class="userAction" method="updatepwd">
+	 		<result name="success">/user/update_success.jsp</result>
+	 		<result name="notLogin">/user/notLogin.jsp</result>
+	 	</action>
+	 	
+	 	<action name="queryInfo" class="userAction" method="queryInfo">
+	 		<result name="success">/user/queryInfo.jsp</result>
+	 		<result name="notLogin">/user/notLogin.jsp</result>
+	 	</action>
+	 	
+	 	<action name="listBook" class="userAction" method="listBook">
+	 		<result name="success">/user/listBook.jsp</result>
+	 		<result name="notLogin">/user/notLogin.jsp</result>
+	 	</action>
+	 	
+	 	<action name="addGB" class="userAction" method="addGB">
+	 		<result name="success" type="redirect">listBook.action</result>
+	 	</action>
+    </package>
+</struts>

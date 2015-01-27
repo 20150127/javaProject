@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	 
+	<!-- 系统管理Action开始 -->
+	<!-- userAction--> 
+	<bean name="sysUserAction" class="cn.xyurp.system.action.SysUserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="sysRoleAction" class="cn.xyurp.system.action.SysRoleAction" scope="prototype">
+		<property name="roleService" ref="roleService"></property>
+		<property name="abstractDao" ref="abstractDao"></property>
+	</bean>
+	<bean name="sysModuleAction" class="cn.xyurp.system.action.SysModuleAction" scope="prototype">
+		<property name="moduleService" ref="moduleService"></property>
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="sysACLService" ref="sysACLService"></property>
+		<property name="sysUserService" ref="userService"></property>
+	</bean>
+	<bean name="sysACLAction" class="cn.xyurp.system.action.SysACLAction" scope="prototype">
+		<property name="moduleService" ref="moduleService"></property>
+		<property name="roleService" ref="roleService"></property>
+		<property name="userService" ref="userService"></property>
+		<property name="sysACLService" ref="sysACLService"></property>
+		<property name="abstractDao" ref="abstractDao"></property>
+	</bean>
+	<bean name="sysLogAction" class="cn.xyurp.system.action.SysLogAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="sysLogService" ref="sysLogService"></property>
+	</bean>
+	<bean name="auth" class="cn.xyurp.system.util.AuthInterceptor" scope="prototype">
+		<property name="sysACLService" ref="sysACLService"></property>
+		<property name="moduleService" ref="moduleService"></property>
+	</bean>
+	
+	<bean name="loginAction" class="cn.xyurp.system.action.LoginAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+		<property name="abstractDao" ref="abstractDao"></property>
+	</bean>
+	<bean id="securityFunction" class="cn.xyurp.system.service.SecurityFunction">
+		<property name="sysACLService" ref="sysACLService"></property>
+	</bean>
+	  
+	<!-- 下载Action -->
+	<bean name="downAction" class="cn.xyurp.system.action.DownLoadAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+	</bean>
+	<bean name="domainAction" class="cn.xyurp.system.action.DomainAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="domainService" ref="domainService"></property>
+		<property name="domainValueService" ref="domainValueService"></property>
+	</bean>
+	
+	<bean name="sysVarAction" class="cn.xyurp.zs.action.SysVariableAction" scope="prototype">
+		<property name="svs" ref="sysVariableService"></property>
+	</bean>
+	
+	<bean name="examineeAction" class="cn.xyurp.zs.action.ExamineeAction" scope="prototype">
+		<property name="examineeService" ref="examineeService"></property>
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="xbService" ref="xbService"></property>
+		<property name="dqService" ref="dqService"></property>
+		<property name="zzmmService" ref="zzmmService"></property>
+		<property name="mzService" ref="mzService"></property>
+		<property name="bylbService" ref="bylbService"></property>
+		<property name="kslbService" ref="kslbService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="kslxService" ref="kslxService"></property>
+		<property name="svs" ref="sysVariableService"></property>
+	</bean>
+	
+	<bean name="specialtyAction" class="cn.xyurp.zs.action.SpecialtyAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="bjAction" class="cn.xyurp.zs.action.BJAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="hkAction" class="cn.xyurp.zs.action.HKAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="zhAction" class="cn.xyurp.zs.action.ZHAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="tcAction" class="cn.xyurp.zs.action.TCAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="csAction" class="cn.xyurp.zs.action.CSAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="fsAction" class="cn.xyurp.zs.action.FSAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="cshzAction" class="cn.xyurp.zs.action.CSHZAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="kslqAction" class="cn.xyurp.zs.action.KSLQAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+	</bean>
+	<bean name="importAction" class="cn.xyurp.zs.action.ImportExcelAction" scope="prototype">
+		<property name="scoreService" ref="scoreService"></property>
+	</bean>
+	<bean name="userAction" class="cn.xyurp.zs.action.UserAction" scope="prototype">
+		<property name="xbService" ref="xbService"></property>
+		<property name="dqService" ref="dqService"></property>
+		<property name="zzmmService" ref="zzmmService"></property>
+		<property name="mzService" ref="mzService"></property>
+		<property name="bylbService" ref="bylbService"></property>
+		<property name="kslbService" ref="kslbService"></property>
+		<property name="specialtyService" ref="specialtyService"></property>
+		<property name="scoreService" ref="scoreService"></property>
+		<property name="kslxService" ref="kslxService"></property>
+		<property name="ad" ref="abstractDao"></property>
+		<property name="gbs" ref="guestBookService"></property>
+		<property name="svs" ref="sysVariableService"></property>
+	</bean>
+	<bean name="noticeAction" class="cn.xyurp.zs.action.NoticeAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="noticeService" ref="noticeService"></property>
+	</bean>
+	<bean name="guestBookAction" class="cn.xyurp.zs.action.GuestBookAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="guestBookService" ref="guestBookService"></property>
+	</bean>
+	
+	<bean name="linkAction" class="cn.xyurp.zs.action.LinkAction" scope="prototype">
+		<property name="abstractDao" ref="abstractDao"></property>
+		<property name="linkService" ref="linkService"></property>
+	</bean>
+	
+	<bean name="exportAction" class="cn.xyurp.zs.action.ExportAction" scope="prototype">
+		<property name="xbService" ref="xbService"></property>
+		<property name="dqService" ref="dqService"></property>
+		<property name="zzmmService" ref="zzmmService"></property>
+		<property name="mzService" ref="mzService"></property>
+		<property name="bylbService" ref="bylbService"></property>
+		<property name="kslbService" ref="kslbService"></property>
+		<property name="kslxService" ref="kslxService"></property>
+		<property name="ss" ref="scoreService"></property>
+	</bean>
+	
+	
+</beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="domain" extends="exception" namespace="/domain">
+	    <action name="list" class="domainAction" method="getDomainList">
+	    	<result name="success">/system/domain/domain_list.jsp</result>
+	    </action>
+	   
+	  	<action name="showDomain" class="domainAction" method="showDomain">
+	    	<result name="success">/system/domain/domain_show.jsp</result>
+	    </action>
+	    
+	    <action name="listValue" class="domainAction" method="listValue">
+	    	<result name="success">/system/domain/domain_value_list.jsp</result>
+	    </action>
+	    
+	    <action name="toAddValue" class="domainAction" method="toAddValue">
+	    	<result name="success">/system/domain/domain_value_add.jsp</result>
+	    </action>
+	  
+	    <action name="addValue" class="domainAction" method="addValue">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    
+	    <action name="delValue" class="domainAction" method="delValue">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+	    
+	    <action name="toUpdateValue" class="domainAction" method="toUpdateValue">
+	    	<result name="success">/system/domain/domain_value_update.jsp</result>
+	    </action>
+	    
+	    <action name="updateValue" class="domainAction" method="updateValue">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+    </package>
+</struts>

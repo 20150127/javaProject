@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="specialty" extends="exception" namespace="/specialty">
+	    <action name="list" class="specialtyAction" method="getList">
+	    	<result name="success">/admin/specialty/specialty_index.jsp</result>
+	    </action>
+
+	    <action name="toAdd" class="specialtyAction" method="toAdd">
+	    	<result name="success">/admin/specialty/specialty_add.jsp</result>
+	    </action>
+	    
+	    <action name="add" class="specialtyAction" method="add">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    
+	    <action name="show" class="specialtyAction" method="show">
+	    	<result name="success">/admin/specialty/specialty_show.jsp</result>
+	    </action>
+	    
+	    <action name="update" class="specialtyAction" method="update">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    
+	    <action name="del" class="specialtyAction" method="del">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+
+    </package>
+</struts>

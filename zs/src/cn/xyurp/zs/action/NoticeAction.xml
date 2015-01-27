@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="notice" extends="exception" namespace="/notice">
+	    <action name="list" class="noticeAction" method="getList">
+	    	<result name="success">/admin/notice/notice_index.jsp</result>
+	    </action>
+
+	    <action name="toAdd" class="noticeAction" method="toAdd">
+	    	<result name="success">/admin/notice/notice_add.jsp</result>
+	    </action>
+	    
+	    <action name="add" class="noticeAction" method="add">
+	    	<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1000000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    
+	    <action name="show" class="noticeAction" method="show">
+	    	<result name="success">/admin/notice/notice_show.jsp</result>
+	    </action>
+	    <action name="showNotice" class="noticeAction" method="show2">
+	    	<result name="success">/admin/notice/notice.jsp</result>
+	    </action>
+	     <action name="moreNotice" class="noticeAction" method="moreNotice">
+	    	<result name="success">/admin/notice/morenotice.jsp</result>
+	    </action>
+	    
+	    <action name="update" class="noticeAction" method="update">
+	    	<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1000000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    
+	    <action name="release" class="noticeAction" method="release">
+	    	<result name="success">/pub/issue_success.jsp</result>
+	    </action>
+	    
+	    <action name="del" class="noticeAction" method="del">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+
+    </package>
+</struts>

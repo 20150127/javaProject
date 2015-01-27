@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+  <tlib-version>1.0</tlib-version>
+  <short-name>xy</short-name>
+  <uri>http://www.xyurp.cn/functions</uri>
+
+  <function>
+    <name>hasPermission</name>
+    <function-class>cn.xyurp.system.service.SecurityFunction</function-class>
+    <function-signature>boolean hasPermission(int,java.lang.String, int)</function-signature>
+  </function>
+  
+  <function>
+ 	<name>sex</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String sex(java.lang.String)</function-signature>
+  </function>
+  
+
+  <function>
+ 	<name>mz</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String mz(java.lang.String)</function-signature>
+  </function>
+  
+
+  <function>
+ 	<name>zzmm</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String zzmm(java.lang.String)</function-signature>
+  </function>
+  
+  <function>
+ 	<name>kslb</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String kslb(java.lang.String)</function-signature>
+  </function>
+  <function>
+ 	<name>zkzbt</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String zkzbt(int)</function-signature>
+  </function>
+  <function>
+ 	<name>bjsj</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String bjsj(int)</function-signature>
+  </function>
+  <function>
+ 	<name>fjsj</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String fjsj(int)</function-signature>
+  </function>
+  <function>
+ 	<name>ksdd</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String ksdd(int)</function-signature>
+  </function>
+  <function>
+ 	<name>fzsj</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String fzsj(int)</function-signature>
+  </function>
+  <function>
+ 	<name>bdsj</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>String bdsj(int)</function-signature>
+  </function>
+  <function>
+ 	<name>kcrs</name>
+    <function-class>cn.xyurp.system.util.FinalConstant</function-class>
+    <function-signature>int kcrs(int)</function-signature>
+  </function>
+</taglib>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="module" extends="exception" namespace="/module">
+	    <action name="list" class="sysModuleAction" method="getList">
+	    	<result name="success">/system/module/module_index.jsp</result>
+	    </action>
+	    <action name="selectList" class="sysModuleAction" method="selectList">
+	    	<result name="success">/system/module/module_select.jsp</result>
+	    </action>
+	    <action name="addUI" class="sysModuleAction" method="addUI">
+	    	<result name="success">/system/module/module_add.jsp</result>
+	    </action>
+	    <action name="add" class="sysModuleAction" method="add">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    <action name="findModule" class="sysModuleAction" method="findModule">
+	    	<result name="success">/system/module/module_update.jsp</result>
+	    </action>
+	    <action name="update" class="sysModuleAction" method="update">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    <action name="del" class="sysModuleAction" method="del">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+    </package>
+</struts>

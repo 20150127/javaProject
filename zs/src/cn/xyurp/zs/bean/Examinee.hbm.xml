@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.xyurp.zs.bean">
+	<class name="Examinee" table="t_zs_examinee">
+		<id name="id" type="java.lang.Integer">
+			<generator class="native" />
+		</id>
+		<property name="name" not-null="true" length="30" type="java.lang.String"/>
+		<property name="sex" not-null="true" length="10" type="java.lang.String"/>
+ 		<property name="birthday" not-null="true" length="20" type="java.lang.String"/>
+		<property name="area" not-null="true" length="10" type="java.lang.String"/>
+		<property name="politics" not-null="true" length="10" type="java.lang.String"/>
+		<property name="nationality" not-null="true" length="10" type="java.lang.String"/>
+		<property name="IDCardNum" not-null="true" unique="true" length="20" type="java.lang.String"/>
+		<property name="examineeNum" not-null="true" unique="true" length="20" type="java.lang.String"/>
+		<property name="examineeType" length="10" type="java.lang.String"/>
+		<property name="examineePhoto" length="1000" type="java.lang.String"/>
+		<property name="school" length="100" type="java.lang.String"/>
+		<property name="graduationDate" not-null="true" length="20" type="java.lang.String"/>
+		<property name="graduationType" length="10" type="java.lang.String"/>
+		<property name="works" length="300" type="java.lang.String"/>
+		<property name="disposal" length="300" type="java.lang.String"/>
+		<property name="rewards" length="300" type="java.lang.String"/>
+		<property name="cerificate" length="300" type="java.lang.String"/>
+		<property name="hobby" length="300" type="java.lang.String"/>
+		<property name="address" length="100" type="java.lang.String"/>
+		<property name="street" length="100" type="java.lang.String"/>
+		<property name="homePhone" length="20" type="java.lang.String"/>
+		<property name="mobilePhone" length="20" type="java.lang.String"/>
+		<property name="letterAddress" length="100" type="java.lang.String"/>
+		<property name="letterName" length="20" type="java.lang.String"/>
+		<property name="linkPhone" not-null="true" length="20" type="java.lang.String"/>
+		<property name="postCode" length="10" type="java.lang.String"/>
+		<many-to-one name="specialtyId" class="cn.xyurp.zs.bean.Specialty"></many-to-one>
+		<property name="ifAdjust" not-null="true" type="java.lang.Integer"/>
+		<property name="password" not-null="true" length="20" type="java.lang.String"/>
+		<property name="ifAdmit" type="java.lang.Integer"/>
+		<property name="ifRetrial" type="int"/>
+		<property name="roomId" type="java.lang.Integer"/>
+		<property name="kl" length="15" type="java.lang.String"/>
+		<property name="hkkh" length="300" type="java.lang.String"/>
+		<property name="zwjd" length="300" type="java.lang.String"/>
+		<property name="kslx" length="10" type="java.lang.String"/>
+		<property name="admissionId" length="20" type="java.lang.String"/>
+		<many-to-one name="specialtyId2" class="cn.xyurp.zs.bean.Specialty"></many-to-one>
+	</class>
+	<joined-subclass name="cn.xyurp.zs.bean.Score" table="t_score" extends="cn.xyurp.zs.bean.Examinee">
+    	<key column="examineeId"/>
+	    <property name="bjyw"/>
+	    <property name="bjsx"/>
+	    <property name="bjyy"/>
+	    <property name="yuwen"/>
+	    <property name="shuxu"/>
+	    <property name="yingyu"/>
+	    <property name="lishi"/>
+	    <property name="zhengzhi"/>
+	    <property name="dili"/>
+	    <property name="wuli"/>
+	    <property name="cs"/>
+	    <property name="huaxue"/>
+	    <property name="shengwu"/>
+	    <property name="xinxijishu"/>
+	    <property name="tongyongjishu"/>
+	    <property name="hkzongfen"/>
+	    <property name="zonghecj"/>
+	    <property name="techangcj"/>
+	    <property name="fushicj"/>
+    </joined-subclass>
+</hibernate-mapping>

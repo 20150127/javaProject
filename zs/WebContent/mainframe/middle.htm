@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style type="text/css">
+<!--
+body {margin: 0px;}
+-->
+</style>
+<script language="javascript">
+function ctrlLeft(obj){
+	if(obj.src.indexOf("images/img/left_04.gif")==-1){
+		obj.src = obj.src.replace(/left_04_new/,"left_04");
+	}
+	else{
+		
+		obj.src = obj.src.replace(/left_04/,"left_04_new");
+	}
+	var o = top.document.getElementById("mid");
+	o.cols = (o.cols=="0,10,*"?"172,10,*":"0,10,*");
+}
+window.onload= function()
+{
+	//ctrlLeft(tupian);
+}
+</script>
+</head>
+
+<body>
+<table width="10" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="middle" background="../images/img/bg1.gif"><img id="tupian" name="tupian" src="../images/img/left_04.gif" width="10" height="20" style="cursor: hand; " onClick="ctrlLeft(this)"></td>
+  </tr>
+</table>
+</body>
+
+</html>

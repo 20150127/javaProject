@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="acl" extends="exception" namespace="/acl">
+
+	<action name="list" class="sysACLAction" method="getList">
+	    	<result name="success">/mainframe/left.jsp</result>
+	    </action>
+    
+		<action name="useracl" class="sysACLAction" method="useracl">
+	    	<result name="success">/system/acl/index.jsp</result>
+	    </action>
+    </package>
+</struts>

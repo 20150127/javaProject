@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.xyurp.zs.bean">
+    <class name="cn.xyurp.zs.bean.Specialty" table="t_zs_specialty">
+        <id name="id">
+            <generator class="native" />
+        </id>
+        <property name="code" type="java.lang.String" length="20"/>
+        <property name="name" type="java.lang.String" length="50"/>
+        
+        <set name="sysUser">	
+        	<key column="specialtyId"></key>
+        	<one-to-many class="cn.xyurp.system.bean.SysUser"/>
+        </set>
+    </class>
+</hibernate-mapping>

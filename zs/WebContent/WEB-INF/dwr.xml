@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+   <allow>
+   	<create creator="spring" javascript="sysACLService">
+      <param name="beanName" value="sysACLService"/>
+    </create>
+   	<create javascript="roleService" creator="spring">
+   		<param name="beanName" value="roleService"></param>
+   	</create>
+   	<create javascript="userService" creator="spring">
+   		<param name="beanName" value="userService"></param>
+   	</create>
+   	<create javascript="moduleService" creator="spring">
+   		<param name="beanName" value="moduleService"></param>
+   		<include method="findSysModuleBySnAndPid"/>	
+   	</create>
+   	
+   	
+   	
+   	<convert match="cn.xyurp.system.bean.SysModule" converter="bean"></convert>
+   	<convert match="cn.xyurp.system.bean.SysUser" converter="bean"></convert>
+   	<convert match="cn.xyurp.system.bean.SysRole" converter="bean"></convert>
+   	<convert match="cn.xyurp.system.bean.SysACL" converter="bean"></convert>
+   	
+   	<!-- 验证专业编码唯一 -->
+   	<create javascript="specialtyService" creator="spring">
+   		<param name="beanName" value="specialtyService"></param>
+   	</create>
+   	<convert match="cn.xyurp.zs.bean.Specialty" converter="bean"></convert>
+   
+   	
+   	<create javascript="registerService" creator="spring">
+   		<param name="beanName" value="scoreService"></param>
+   	</create>
+   	<convert match="cn.xyurp.zs.bean.Score" converter="bean"></convert>
+   </allow>
+</dwr>

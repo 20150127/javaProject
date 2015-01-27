@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="cshz" extends="exception" namespace="/cshz">
+	    <action name="list" class="cshzAction" method="list">
+	    	<result name="success">/admin/cshz/cshz_index.jsp</result>
+	    </action>
+	    <action name="plfs" class="cshzAction" method="plfs">
+	    	<result name="success">/pub/retrial_success.jsp</result>
+	    </action>
+	    <action name="pllq" class="cshzAction" method="pllq">
+	    	<result name="success">/pub/lq_success.jsp</result>
+	    </action>
+	    <action name="unRetrial" class="cshzAction" method="retrial">
+	    	<result name="success">/pub/retrial_success.jsp</result>
+	    </action>
+	    <action name="retrial" class="cshzAction" method="retrial">
+	    	<result name="success">/pub/retrial_success.jsp</result>
+	    </action>
+	     <action name="toExport" class="cshzAction" method="toExport">
+			<result name="success">/admin/cshz/toExportExcel.jsp</result>
+		</action>
+	    <action name="export" class="cshzAction" method="export">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel;charset=UTF-8</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+    </package>
+</struts>

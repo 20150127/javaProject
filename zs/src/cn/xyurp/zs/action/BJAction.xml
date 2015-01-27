@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="bj" extends="exception" namespace="/bj">
+	    <action name="list" class="bjAction" method="list">
+	    	<result name="success">/admin/bj/bj_index.jsp</result>
+	    </action>
+
+	    <action name="toUpdate" class="bjAction" method="toUpdate">
+	    	<result name="success">/admin/bj/bj_update.jsp</result>
+	    </action>
+	    
+	    <action name="update" class="bjAction" method="update">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    
+	    <action name="toExport" class="bjAction" method="toExport">
+			<result name="success">/admin/bj/toExportExcel.jsp</result>
+		</action>
+	    <action name="export" class="bjAction" method="export">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel;charset=UTF-8</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+	    
+	    <action name="toImport" class="bjAction" method="toImport">
+	    	<result name="success">/admin/bj/bj_import.jsp</result>
+	    </action>
+	    <action name="importExcel" class="importAction" method="importExcelbs">
+	    	<result name="finsh">/admin/bj/bj_result.jsp</result>
+	    </action>
+    </package>
+</struts>

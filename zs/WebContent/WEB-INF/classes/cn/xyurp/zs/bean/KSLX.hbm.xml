@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.xyurp.zs.bean">
+	<class name="cn.xyurp.zs.bean.KSLX" table="t_zs_kslx">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="kslxdm" length="10" type="java.lang.String"/>
+		<property name="kslxmc" length="20" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

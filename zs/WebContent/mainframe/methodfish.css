@@ -1,0 +1,194 @@
+/*===============================================*/
+/*=============登录页面部分=========================*/
+/*===============================================*/
+/*登录页面登录文字大小、颜色*/
+.login01 {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.login01:link {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.login01:visited {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.login01:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.login01:active {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+/*登录页面输入框控制*/
+.f_input_login {font-size: 9pt; line-height: 150%; color: #333333}
+
+/*登录页面版权处背景图片、颜色*/
+.copyright_login{font-size: 9pt; line-height: 150%; color: #666666; font-family: "Verdana", "Arial" ; text-decoration: none}
+
+/*===============================================*/
+/*=============整体框架部分=========================*/
+/*===============================================*/
+/*body字体颜色，滚动条颜色*/ 
+BODY {
+	 SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; SCROLLBAR-SHADOW-COLOR: #919192; 
+SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR:  #919192; SCROLLBAR-TRACK-COLOR: #ffffff;
+SCROLLBAR-DARKSHADOW-COLOR: #ffffff;}
+
+/*对整体字体链接的颜色定义*/
+a:visited {  color: #000000;text-decoration: none}
+a:hover {   color: #0000FF; text-decoration: underline}
+a:active {  color: #FF0000;text-decoration: none}
+
+/*头部导航条字体大小、颜色*/
+.top {font-size: 9pt; font-weight: bold; text-align:center; line-height: 150%; color: #0052B4; text-decoration: none}
+a.top:link {font-size: 9pt; font-weight: bold; text-align:center; line-height: 150%; color: #0052B4; text-decoration: none}
+a.top:visited {font-size: 9pt; font-weight: bold; text-align:center; line-height: 150%; color: #0052B4; text-decoration: none}
+a.top:hover {font-size: 9pt; font-weight: bold; text-align:center; line-height: 150%; color: #F40000; text-decoration: underline}
+a.top:active {font-size: 9pt; font-weight: bold; text-align:center; line-height: 150%; color: #F40000; text-decoration: nione}
+
+/*头部字体大小、颜色*/
+.top01 {font-size: 9pt; line-height: 150%; color: #2650A6; text-decoration: none}
+a.top01:link {font-size: 9pt; line-height: 150%; color: #2650A6; text-decoration: none}
+a.top01:visited {font-size: 9pt; line-height: 150%; color: #2650A6; text-decoration: none}
+a.top01:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.top01:active {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: nione}
+
+.top02 {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.top02:link {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.top02:visited {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.top02:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.top02:active {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+/*头部与下半部分间隔背景图、高度控制*/
+.topbg01 { height:27; background-image: url(../images/top_03.gif);  background-repeat: repeat-x; }
+.topbg02 { height:10; background-image: url(../images/top_04.gif);  background-repeat: repeat-x; }
+
+/*左侧框架背景图片*/
+.leftbg01 { background-color:#3468A6;  background-repeat: repeat-y; }
+
+/*左侧表格背景色、边框颜色、边框大小控制*/
+.tableleft01{font-size: 9pt; line-height: 150%; color: #2650A6; border:#5786BE solid;border-width:1 0 0 1}
+
+/*左侧框架导航背景图片、边框颜色、边框大小控制*/
+.leftbg02 { height:22; background-color:#5F85D9; background-image: url(images/left_01.gif);  background-repeat: repeat-x; border:#5786BE solid; border-width:0 1 1 0 }
+
+/*左侧框架树型结构区域背景图片、边框颜色、边框大小控制*/
+.leftbg03 { height:533; background-color:#3375B5; padding: 10px; border:#5786BE solid; border-width:0 1 1 0}
+
+/*左侧框架导航加粗字体颜色*/
+.left {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #0052B4; text-decoration: none}
+a.left:link {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #0052B4; text-decoration: none}
+a.left:visited {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #0052B4; text-decoration: none}
+a.left:hover {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.left:active {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+/*左侧框架树形字体颜色*/
+.left12 {font-size: 9pt; line-height: 150%; color: #FFFFFF; text-decoration: none}
+a.left12:link {font-size: 9pt; line-height: 150%; color: #FFFFFF; text-decoration: none}
+a.left12:visited {font-size: 9pt; line-height: 150%; color: #FFFFFF; text-decoration: none}
+a.left12:hover {font-size: 9pt; line-height: 150%; color: #FFFF00; text-decoration: underline}
+a.left12:active {font-size: 9pt; line-height: 150%; color: #FFFF00; text-decoration: none}
+
+/*版权字体颜色*/
+.copyright {font-size: 9pt; line-height: 150%; color: #333333; padding-left:5pt; font-family: "Verdana", "Arial" ; text-decoration: none}
+a.copyright:link {font-size: 9pt; line-height: 150%; color: #1C4192; padding-left:5pt; font-family: "Verdana", "Arial" ; text-decoration: none}
+a.copyright:visited {font-size: 9pt; line-height: 150%; color: #333333; padding-left:5pt; font-family: "Verdana", "Arial"; text-decoration: none}
+a.copyright:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; padding-left:5pt; font-family: "Verdana", "Arial"; text-decoration: underline}
+a.copyright:active {font-size: 9pt; line-height: 150%; color: #0000CC; padding-left:5pt; font-family: "Verdana", "Arial"; text-decoration: none}
+
+/*版权处背景图片、颜色*/
+.copyrightbg01 { background-image: url(../images/copyright_bg.gif);  background-repeat: repeat-x; }
+
+/*中间内容区域链接字体颜色、大小*/
+.mid {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.mid:link {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.mid:visited {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.mid:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.mid:active {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+/*中间内容区域链接字体颜色、大小*/
+.mid01 {font-size: 9pt; line-height: 150%; color: #2650A6; text-decoration: none}
+a.mid01:link {font-size: 9pt; line-height: 150%; color: #2650A6; text-decoration: none}
+a.mid01:visited {font-size: 9pt; line-height: 150%; color: #2650A6; text-decoration: none}
+a.mid01:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.mid01:active {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+/*中间内容区域链接字体颜色、大小*/
+.mid02 {font-size: 9pt; font-weight: bold; line-height: 150%; color: #2650A6; text-decoration: none}
+a.mid02:link {font-size: 9pt; font-weight: bold; line-height: 150%; color: #2650A6; text-decoration: none}
+a.mid02:visited {font-size: 9pt; font-weight: bold; line-height: 150%; color: #2650A6; text-decoration: none}
+a.mid02:hover {font-size: 9pt; font-weight: bold; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.mid02:active {font-size: 9pt; font-weight: bold; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+.mid03 {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #333333; text-decoration: none}
+a.mid03:link {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #333333; text-decoration: none}
+a.mid03:visited {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #333333; text-decoration: none}
+a.mid03:hover {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.mid03:active {font-size: 10.8pt; font-weight: bold; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+/*中间背景图片*/
+.midbg01 { background-image: url(images/mid_bg_02.gif);  background-repeat: repeat-x; }
+
+/*中间当前位置字体颜色*/
+.location {font-size: 9pt; line-height: 150%; color: #333333; padding-left:5pt; text-decoration: none}
+a.location:link {font-size: 9pt; line-height: 150%; color: #333333; padding-left:5pt; text-decoration: none}
+a.location:visited {font-size: 9pt; line-height: 150%; color: #333333; padding-left:5pt; text-decoration: none}
+a.location:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; padding-left:5pt; text-decoration: underline}
+a.location:active {font-size: 9pt; line-height: 150%; color: #F50D0D; padding-left:5pt; text-decoration: none}
+
+/*底部版权字体、颜色*/
+.bot01 {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.bot01:link {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.bot01:visited {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.bot01:hover {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: underline}
+a.bot01:active {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: nione}
+
+/*红色字体颜色，如用在翻页处的数字*/
+.red {font-size: 9pt; line-height: 150%; color: #FF0000; text-decoration: none}
+a.red:link {font-size: 9pt; line-height: 150%; color: #FF0000; text-decoration: none}
+a.red:visited {font-size: 9pt; line-height: 150%; color: #FF0000; text-decoration: none}
+a.red:hover {font-size: 9pt; line-height: 150%; color: #FF0000; text-decoration: underline}
+a.red:active {font-size: 9pt; line-height: 150%; color: #FF0000; text-decoration: none}
+
+/*文字列表前修饰点颜色，橙色*/
+.orange {font-size: 9pt; line-height: 150%; color: #FF6600; text-decoration: none}
+a.orange:link {font-size: 9pt; line-height: 150%; color: #FF6600; text-decoration: none}
+a.orange:visited {font-size: 9pt; line-height: 150%; color: #FF6600; text-decoration: none}
+a.orange:hover {font-size: 9pt; line-height: 150%; color: #FF6600; text-decoration: underline;}
+a.orange:active {font-size: 9pt; line-height: 150%; color: #FF6600; text-decoration: none}
+
+/*翻页处字体大小、颜色*/
+.turnpage {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.turnpage:link {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.turnpage:visited {font-size: 9pt; line-height: 150%; color: #333333; text-decoration: none}
+a.turnpage:hover {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: underline}
+a.turnpage:active {font-size: 9pt; line-height: 150%; color: #F50D0D; text-decoration: none}
+
+
+/*输入框、多选框、下拉菜单等表单属性设置*/
+.f_input {font-size: 9pt; line-height: 150%; color: #333333}
+.f_select {font-size: 9pt; line-height: 150%; color: #333333}
+.f_checkbox {font-size: 9pt; line-height: 150%; color: #333333}
+.f_btn01 { BORDER-RIGHT: #a2a2a2 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-SIZE: 9pt; BACKGROUND: #cccccc; BORDER-LEFT: #ffffff 1px solid; COLOR: #333333; PADDING-TOP: 3px; BORDER-BOTTOM: #a2a2a2 1px solid; HEIGHT: 21px }
+.f_btn02 { BORDER-RIGHT: #7AA0BB 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-SIZE: 9pt; BACKGROUND: #C2DEF2; BORDER-LEFT: #ffffff 1px solid; COLOR: #003366; PADDING-TOP: 3px; BORDER-BOTTOM: #7AA0BB 1px solid; HEIGHT: 21px }
+
+
+/*右侧内容区域内容属性表格边框颜色、大小*/
+.table01{font-size: 9pt; line-height: 150%; color: #333333; border:#DDDDDD solid;border-width:1 0 0 1}
+
+/*右侧内容区域内容属性表格背景色、字体颜色*/
+.td01{font-size: 9pt; font-weight: bold; line-height: 150%; color: #FFFFFF;   text-align:center; background-color:#5F85D9; border:#DDDDDD solid; border-width:0 1 1 0}
+
+/*右侧内容区域背景色、字体颜色*/
+.td02{font-size: 9pt; line-height: 150%; color: #333333; padding-left:5px; background-color:#FFFFFF; border:#DDDDDD solid;border-width:0 1 1 0}
+
+/*右侧内容区域背景色、字体颜色*/
+.td03{font-size: 9pt; line-height: 150%; color: #333333 ; align:center; background-color:#FFFFFF; border:#DDDDDD solid;border-width:0 1 1 0}
+
+/*右侧内容区域间隔横线背景色、高度*/
+.td04{background-image: url(images/mid_adorn_02.gif); height: 2; px solid;border-width:0 0 0 0}
+
+/*右侧输入框前文字背景颜色*/
+.td05{font-size: 9pt; line-height: 150%; color: #333333; padding-left:5px; background-color:#F0F6FF; border:#DDDDDD solid;border-width:0 1 1 0}
+
+/*右侧内容区域内容属性表格背景色、字体颜色*/
+.td06{font-size: 9pt; font-weight: bold; line-height: 150%; color: #FFFFFF;  padding-left:5px ;  background-color:#5F85D9; border:#DDDDDD solid; border-width:0 1 1 0}
+
+/*右侧内容区域居右对齐的文字属性表格背景色、字体颜色*/
+.td07{font-size: 9pt; line-height: 150%; color: #333333;   text-align:right; background-color:#FFFFFF; border:#DDDDDD solid;border-width:0 1 1 0}
+
+/*进度条边框颜色*/
+.table02{border:#767676 solid;border-width:1 1 1 1}
+
+
+
+

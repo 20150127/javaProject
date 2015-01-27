@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="user" extends="exception" namespace="/user">
+	    <action name="list" class="sysUserAction" method="getList">
+	    	<result name="success">/system/user/user_index.jsp</result>
+	    </action>
+	    <action name="addUI" class="sysUserAction" method="addUI">
+	    	<result name="success">/system/user/user_add.jsp</result>
+	    </action>
+	    <action name="add" class="sysUserAction" method="add">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    <action name="del" class="sysUserAction" method="del">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+	    <action name="update" class="sysUserAction" method="findUser">
+	    	<result name="success">/system/user/user_update.jsp</result>
+	    </action>
+	    <action name="toUpdateMM" class="sysUserAction" method="toUpdateMM">
+	    	<result name="success">/system/user/user_update_modifypassword.jsp</result>
+	    </action>
+	    <action name="updateUserMM" class="sysUserAction" method="updateUserMM">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    <action name="updateSave" class="sysUserAction" method="update">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    <action name="updateExpireTime" class="sysUserAction" method="updateExpireTime">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    <action name="getRoles" class="sysUserAction" method="userRoleList">
+	    	<result name="success">/system/user/role_index.jsp</result>
+	    </action>
+	    <action name="addRoles" class="sysUserAction" method="addRoles">
+	    	<result name="success">/system/user/userRoles_add.jsp</result>
+	    </action>
+	    <action name="userAddRoles" class="sysUserAction" method="userAddRoles">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+    </package>
+</struts>

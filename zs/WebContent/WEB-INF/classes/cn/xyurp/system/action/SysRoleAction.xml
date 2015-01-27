@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="role" extends="exception" namespace="/role">
+	    <action name="list" class="sysRoleAction" method="getList">
+	    	<result name="success">/system/role/role_index.jsp</result>
+	    </action>
+	    <action name="addUI" class="sysRoleAction" method="addUI">
+	    	<result name="success">/system/role/role_add.jsp</result>
+	    </action>
+	    <action name="add" class="sysRoleAction" method="add">
+	    	<result name="success">/pub/add_success.jsp</result>
+	    </action>
+	    <action name="findRole" class="sysRoleAction" method="findRole">
+	    	<result name="success">/system/role/role_update.jsp</result>
+	    </action>
+	    <action name="del" class="sysRoleAction" method="del">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+	    <action name="update" class="sysRoleAction" method="update">
+	    	<result name="success">/pub/update_success.jsp</result>
+	    </action>
+	    <action name="select" class="sysRoleAction" method="select">
+	    	<result name="success">/system/user/role_select.jsp</result>
+	    </action>
+	    <action name="findUsers" class="sysRoleAction" method="findUsers">
+	    	<result name="success">/system/role/user_index.jsp</result>
+	    </action>
+	    <action name="delUserRole" class="sysRoleAction" method="delUserRole">
+	    	<result name="success">/pub/del_success.jsp</result>
+	    </action>
+	    
+	    
+	    
+    </package>
+</struts>
