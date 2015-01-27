@@ -909,6 +909,7 @@
 											<span class="style1">**请慎重选择专业，选择之后无法修改!</span>
 												</td>
 											</tr>
+											  
 											<tr>
 												<td width="14%" height="30" align="right" class="title" nowrap>
 													<strong> 报考专业第二志愿: </strong>
@@ -924,44 +925,20 @@
 											<input name="o.ifAdjust" id="tj_1" type="hidden" value="1">
 												</td>
 											</tr>
-											<!--tr>
+											<tr>
 												<td height="30" align="right" class="title">
 													<strong> 是否同意调剂: </strong>
 												</td>
 												<td height="30" align="left" class="content_L">
 													<label for="tj_1">
 														<input name="o.ifAdjust" id="tj_1" type="radio" value="1" checked>是
-
-
-
-
-
-
-
-
-
-
-
-
 													</label>
 &nbsp;&nbsp;&nbsp;&nbsp;
 													<label for="tj_2">
 														<input name="o.ifAdjust" id="tj_2" type="radio" value="0" >否
-
-
-
-
-
-
-
-
-
-
-
-
 													</label>
 												</td>
-											</tr-->
+											</tr>
 											
 										</table>
 									</fieldset>
@@ -985,7 +962,7 @@
 												</td>
 												<td width="86%" height="30" align="left" class="content_L">
 													<input name="o.password" type="password" id="password" maxlength="20">
-														<span class="style1">**此密码由考生自己指定，至少六位，为保护个人信息请选用稍复杂的密码。修改信息， 打印报名信息 、查询录取通知、都将使用此密码，请牢记。一旦设置不能更改。</span>
+														<span class="style1">**密码由字母、数字、特殊符号组成。此密码由考生自己指定，至少六位，为保护个人信息请选用稍复杂的密码。修改信息， 打印报名信息 、查询录取通知、都将使用此密码，请牢记。一旦设置不能更改。</span>
 												</td>
 											</tr>
 											<tr>
