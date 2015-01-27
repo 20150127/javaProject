@@ -135,7 +135,23 @@
 			　　}
 			　　obj.value=result;
 			　} 
-
+				function checkScore(ele){
+					if(regNull.test($(ele).val())){
+						alert("成绩不能为空！");
+						$(ele).select();
+						return false;
+					}else{
+						try{
+							if($(ele).val()*1 < 0 || $(ele).val()*1 > 150)
+								throw new Error(-1,'error');
+						}catch(e){
+							alert("成绩不合法！");
+							$("ele").select();
+							return false;
+						}
+						
+					}
+				}
 				function checkIDCard(){
 					var regNull = /^\s*$/;
 					if(!regNull.test($("#IDCardNum").val())){
@@ -628,7 +644,7 @@
 												</td>
 												<td height="30" colspan="2" align="left" class="content_L">
 													<input class="score" name="o.chineseScore" type="text" id="chineseScore"
-														size="16" maxlength="5">
+														size="16" maxlength="5" onblur="checkScore(this)">
 													<span class="style1">** 考试成绩(0~150)之间 </span>
 												</td>
 											</tr>
@@ -638,7 +654,7 @@
 												</td>
 												<td height="30" colspan="2" align="left" class="content_L">
 													<input class="score" name="o.mathScore" type="text" id="mathScore"
-														size="16" maxlength="5">
+														size="16" maxlength="5" onblur="checkScore(this)">
 													<span class="style1">** 考试成绩(0~150)之间 </span>
 												</td>
 											</tr>
@@ -648,7 +664,7 @@
 												</td>
 												<td height="30" colspan="2" align="left" class="content_L">
 													<input score="score" name="o.englishScore" type="text" id="englishScore"
-														size="16" maxlength="5">
+														size="16" maxlength="5" onblur="checkScore(this)">
 													<span class="style1">** 考试成绩(0~150)之间 </span>
 												</td>
 											</tr>
