@@ -177,10 +177,56 @@
 				var mobilePhone = /^1\d{10}$/;
 				var postCode = /^\d{6}$/;
 				var picReg = /^jpg$/;
+				//var score = /^150|1[0-4][0-9]|1[0-4][0-9]\.?[0-9]|[1-9][0-9]|[1-9][0-9]\.?[0-9]|[1-9]$/;
 				if(regNull.test($("#name").val())){
 					alert("用户名不能为空");
 					$("#name").select();
 					return false;
+				}
+				if(regNull.test($("#chineseScore").val())){
+					alert("语文成绩不能为空！");
+					$("#chineseScore").select();s
+					return false;
+				}else{
+					try{
+						if($("#chineseScore").val()*1 < 0 || $("#chineseScore").val()*1 > 150)
+							throw new Error(-1,'error');
+					}catch(e){
+						alert("语文成绩不合法！");
+						$("#chineseScore").select();
+						return false;
+					}
+					
+				}
+				if(regNull.test($("#mathScore").val())){
+					alert("数学成绩不能为空！");
+					$("#mathScore").select();
+					return false;
+				}else{
+					try{
+						if($("#mathScore").val()*1 < 0 || $("#mathScore").val()*1 > 150)
+							throw new Error(-1,'error');
+					}catch(e){
+						alert("数学成绩不合法！");
+						$("#mathScore").select();
+						return false;
+					}
+					
+				}
+				if(regNull.test($("#englishScore").val())){
+					alert("英语成绩不能为空！");
+					$("#englishScore").select();
+					return false;
+				}else{
+					try{
+						if($("#englishScore").val()*1 < 0 || $("#englishScore").val()*1 > 150)
+							throw new Error(-1,'error');
+					}catch(e){
+						alert("英语成绩不合法！");
+						$("#englishScore").select();
+						return false;
+					}
+					
 				}
 				if(!birthday.test($("#birthday").val())){
 					alert("出生日期格式不合法,必须是8位数字,并符合年、月、日规范!");
@@ -283,10 +329,10 @@
 						return false;
 					}	
 				}
-				/*if($("#specialtyId2").val() == $("#specialtyId").val()){
+				if($("#specialtyId2").val() == $("#specialtyId").val()){
 					alert("报考专业第一志愿与报考专业第二志愿不能相同!");
 					return false;
-				}*/
+				}
 			
 				if(regNull.test($("#password").val())){
 					alert(" 密码不能为空,且至少六位!.");
@@ -574,6 +620,36 @@
 															</option>
 														</c:forEach>
 													</select>
+												</td>
+											</tr>
+											<tr>
+												<td height="30" align="right" class="title">
+													<strong> 语文成绩: </strong>
+												</td>
+												<td height="30" colspan="2" align="left" class="content_L">
+													<input class="score" name="o.chineseScore" type="text" id="chineseScore"
+														size="16" maxlength="5">
+													<span class="style1">** 考试成绩(0~150)之间 </span>
+												</td>
+											</tr>
+											<tr>
+												<td height="30" align="right" class="title">
+													<strong> 数学成绩: </strong>
+												</td>
+												<td height="30" colspan="2" align="left" class="content_L">
+													<input class="score" name="o.mathScore" type="text" id="mathScore"
+														size="16" maxlength="5">
+													<span class="style1">** 考试成绩(0~150)之间 </span>
+												</td>
+											</tr>
+											<tr>
+												<td height="30" align="right" class="title">
+													<strong> 英语成绩: </strong>
+												</td>
+												<td height="30" colspan="2" align="left" class="content_L">
+													<input score="score" name="o.englishScore" type="text" id="englishScore"
+														size="16" maxlength="5">
+													<span class="style1">** 考试成绩(0~150)之间 </span>
 												</td>
 											</tr>
 										</table>

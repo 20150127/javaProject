@@ -84,6 +84,11 @@ public class Examinee {
 	
 	private Specialty specialtyId2;// 报考专业II
 	
+	/*注册时加入，语数外成绩*/
+	private Double chineseScore;
+	private Double mathScore;
+	private Double englishScore;
+	
 	public String getKslx() {
 		return kslx;
 	}
@@ -397,5 +402,30 @@ public class Examinee {
 	public void setSpecialtyId2(Specialty specialtyId2) {
 		this.specialtyId2 = specialtyId2;
 	}
+
+	public Double getChineseScore() {
+		return chineseScore;
+	}
+
+	public void setChineseScore(Double chineseScore) {
+		this.chineseScore = chineseScore;
+	}
+
+	public Double getMathScore() {
+		return mathScore;
+	}
+
+	public void setMathScore(Double mathScore) {
+		this.mathScore = mathScore;
+	}
+
+	public Double getEnglishScore() {
+		return englishScore;
+	}
+
+	public void setEnglishScore(Double englishScore) {
+		this.englishScore = englishScore;
+	}
+	
 	
 }

@@ -44,6 +44,9 @@
 		<property name="zwjd" length="300" type="java.lang.String"/>
 		<property name="kslx" length="10" type="java.lang.String"/>
 		<property name="admissionId" length="20" type="java.lang.String"/>
+		<property name="chineseScore" type="java.lang.Double"/>
+		<property name="mathScore" type="java.lang.Double" />
+		<property name="englishScore" type="java.lang.Double" />
 		<many-to-one name="specialtyId2" class="cn.xyurp.zs.bean.Specialty"></many-to-one>
 	</class>
 	<joined-subclass name="cn.xyurp.zs.bean.Score" table="t_score" extends="cn.xyurp.zs.bean.Examinee">
