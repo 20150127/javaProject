@@ -212,7 +212,7 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
     <td align="center" valign="middle" >
 					    <table width="650px" height="573" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#333333" style="margin-top:4px;background-color: #FFFFFF;">
 					  	<caption>	
-							         <h1><strong><br><br>${sysv.registerTitle }年北京青年政治学院<br>高等职业教育自主招生报名表</strong></h1>
+							         <h1><strong><br><br>2015年北京青年政治学院<br>高等职业教育自主招生报名表</strong></h1>
 						    <div align="left">考生号：${o.examineeNum }</div>
 						</caption>
 						
@@ -273,6 +273,14 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 					    <td align="middle">${o.postCode }</td>
 					    </tr>
 					  <tr>
+					    <td align="middle" height="33">语文</td>
+					    <td align="left">${o.chineseScore }</td>
+					    <td align="middle">数学</td>
+					    <td align="middle" colspan="2">${o.mathScore }</td>
+					    <td align="middle">英语</td>
+					    <td align="middle">${o.englishScore }</td>
+					    </tr>
+					  <tr>
 					    <td align="middle" height="33">在校担任社会工作</td>
 					    <td colspan="6" align="left">&nbsp;${o.works }</td>
 					    </tr>
@@ -306,7 +314,7 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 					    
 					    
 					  
-						  <!--tr>
+						  < tr>
 						    <td align="middle" height="33">是否同意调剂</td>
 						    <td colspan="6" align="left">
 						    <c:choose>
@@ -317,9 +325,9 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 																同意 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;不同意 (&nbsp;&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;)
 															</c:otherwise>	
 														</c:choose></td>
-						    </tr-->
+						    </tr>
 					  	<tr>
-					    	<td colspan="7" align="left" height="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我已阅读《首钢工学院${sysv.registerTitle }年自主招生章程》和《首钢工学院${sysv.registerTitle }年自主招生简章》，遵循上述文件的规定，我愿意报考首钢工学院自主招生专业，并接受测试。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我本着诚实的态度填写了以上内容，并对其真实性和准确性负责。<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;考生（签字）：&nbsp;&nbsp;&nbsp;　　　　 家长（签字）：　　&nbsp;&nbsp;&nbsp;　　 填表日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;日</p><br></td>
+					    	<td colspan="7" align="left" height="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我已阅读《北京青年政治学院2015年自主招生章程》和《北京青年政治学院2015年自主招生简章》，遵循上述文件的规定，我愿意报考首钢工学院自主招生专业，并接受测试。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我本着诚实的态度填写了以上内容，并对其真实性和准确性负责。<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;考生（签字）：&nbsp;&nbsp;&nbsp;　　　　 家长（签字）：　　&nbsp;&nbsp;&nbsp;　　 填表日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;日</p><br></td>
 					    </tr>
 					
 					</table>
@@ -381,7 +389,7 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
     <td align="center" valign="top" >
 					    <table width="650px" height="573" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#333333" style="margin-top:4px;background-color: #FFFFFF;">
 					  	<caption>	
-							         <h1><strong>${sysv.registerTitle }年首钢工学院<br>高等职业教育自主招生报名表</strong></h1>
+							         <h1><strong>2015北京青年政治学院<br>高等职业教育自主招生报名表</strong></h1>
 						    <div align="left">考生号：${o.examineeNum }</div>
 						</caption>
 						
@@ -441,6 +449,14 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 					    <td align="middle">邮编</td>
 					    <td align="left">${o.postCode }</td>
 					    </tr>
+					    <tr>
+					    <td align="middle" height="33">语文</td>
+					    <td align="middle">${o.chineseScore }</td>
+					    <td align="middle">数学</td>
+					    <td align="middle" colspan="2">${o.mathScore }</td>
+					    <td align="middle">英语</td>
+					    <td align="middle">${o.englishScore }</td>
+					    </tr>
 					  <tr>
 					    <td align="middle">在校担任社会工作</td>
 					    <td colspan="6" align="left">&nbsp;${o.works }</td>
@@ -471,11 +487,7 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 					    <td  align="left" colspan="6">${o.specialtyId2.name }</td>
 					    
 					    </tr>
-					  
-					    
-					    
-					  
-						  <!--tr>
+						  <tr>
 						    <td align="middle">是否同意调剂</td>
 						    <td colspan="6" align="left">
 						    <c:choose>
@@ -486,9 +498,9 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 																同意 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;不同意 (&nbsp;&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;)
 															</c:otherwise>	
 														</c:choose></td>
-						    </tr-->
+						    </tr>
 					  	<tr>
-					    	<td colspan="7" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我已阅读《首钢工学院${sysv.registerTitle }年自主招生章程》和《首钢工学院${sysv.registerTitle }年自主招生简章》，遵循上述文件的规定，我愿意报考首钢工学院自主招生专业，并接受测试。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我本着诚实的态度填写了以上内容，并对其真实性和准确性负责。<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;考生（签字）：&nbsp;&nbsp;&nbsp;　　　　 家长（签字）：　　&nbsp;&nbsp;&nbsp;　　 填表日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;日</p><br></td>
+					    	<td colspan="7" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我已阅读《北京青年政治学院2015年自主招生章程》和《北京青年政治学院2015年自主招生简章》，遵循上述文件的规定，我愿意报考首钢工学院自主招生专业，并接受测试。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我本着诚实的态度填写了以上内容，并对其真实性和准确性负责。<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;考生（签字）：&nbsp;&nbsp;&nbsp;　　　　 家长（签字）：　　&nbsp;&nbsp;&nbsp;　　 填表日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;日</p><br></td>
 					    </tr>
 					
 					</table>

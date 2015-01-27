@@ -13,9 +13,9 @@
 	 		<result name="success">/user/register.jsp</result>
 	 	</action>
 	 	
-	 	<action name="register" class="userAction" method="register">
-	 		<result name="success">/user/register_success.jsp</result>
-	 	</action>
+<!-- 	 	<action name="register" class="userAction" method="register"> 
+	 		<result name="success">/user/register_success.jsp</result> 
+	 	</action> -->
 	 	
 	 	<action name="register" class="userAction" method="register">
 	 		<result name="success">/user/register_success.jsp</result>
