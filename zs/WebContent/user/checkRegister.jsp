@@ -163,8 +163,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<p><span style='font-size:10.0pt'>六、考生姓名栏所填姓名应与本人身份证、户口本的姓名一致。</span></p>
 							<p><span style='font-size:10.0pt'>七、请准备近期一寸免冠数码照片<span lang=EN-US>,</span>大小在<span lang=EN-US>200K</span>以内（格式<span lang=EN-US>*.jpg</span>）<span lang=EN-US>120*150</span>像素，用于上传。</span></p>
 							<p><span style='font-size:10.0pt'>八、“家庭详细地址”，<span class=GramE>不</span>得用简称或写“本市”、“本省”等字样。</span></p>
-							<p><span style='font-size:10.0pt'>九、<b>通过网上报名后，须到我院进行现场报名进行确认，并领取准考证，否则无效。</b></span></p>
-							<p><span style='font-size:10.0pt'>十、在网上报名的过程中遇到任何问题，请电话咨询：<span lang=EN-US>59805806</span>，<span lang=EN-US>59805809</span>，<span lang=EN-US>59805808</span>。</span></p>
+							<p><span style='font-size:10.0pt'>九、<b>考生网上报名后，须到我院进行现场信息确认，并领取准考证，否则无效。</b></span></p>
+							<p><span style='font-size:10.0pt'>十、在网上报名的过程中遇到任何问题，请电话咨询：<span lang=EN-US>64724789</span>，<span lang=EN-US>84778264</span>，<span lang=EN-US>84778254</span>。</span></p>
 						</div>
 					</td>
 				</tr>
