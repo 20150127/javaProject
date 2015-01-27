@@ -645,7 +645,7 @@
 												<td height="30" colspan="2" align="left" class="content_L">
 													<input class="score" name="o.chineseScore" type="text" id="chineseScore"
 														size="16" maxlength="5" onblur="checkScore(this)">
-													<span class="style1">** 考试成绩(0~150)之间 </span>
+													<span class="style1">** 普通高中生填写高中会考成绩，中职生填写最后一学年期末成绩</span>
 												</td>
 											</tr>
 											<tr>
@@ -655,7 +655,7 @@
 												<td height="30" colspan="2" align="left" class="content_L">
 													<input class="score" name="o.mathScore" type="text" id="mathScore"
 														size="16" maxlength="5" onblur="checkScore(this)">
-													<span class="style1">** 考试成绩(0~150)之间 </span>
+													<span class="style1">** 普通高中生填写高中会考成绩，中职生填写最后一学年期末成绩</span>
 												</td>
 											</tr>
 											<tr>
@@ -665,7 +665,7 @@
 												<td height="30" colspan="2" align="left" class="content_L">
 													<input score="score" name="o.englishScore" type="text" id="englishScore"
 														size="16" maxlength="5" onblur="checkScore(this)">
-													<span class="style1">** 考试成绩(0~150)之间 </span>
+													<span class="style1">** 普通高中生填写高中会考成绩，中职生填写最后一学年期末成绩</span>
 												</td>
 											</tr>
 										</table>
@@ -730,13 +730,13 @@
 								<td height="102" align="center" valign="top" class="content_L">
 									<fieldset>
 										<legend>
-											<strong><strong> 在校表现： (以下各项简要填写,五十字以内)</strong> </strong>
+											<strong><strong> 个人表现： (以下各项简要填写在校或工作或服兵役期间的表现,五十字以内)</strong> </strong>
 										</legend>
 										<table width="744" height="210" border="0" cellpadding="0"
 											cellspacing="0" class="table">
 											<tr>
 												<td width="14%" height="30" align="right" class="title">
-													<strong> 在校或工作期间担任社会工作: </strong>
+													<strong> 担任社会工作: </strong>
 												</td>
 												<td width="86%" height="30" align="left" class="content_L">
 													<textarea name="o.works" cols="46" rows="2" id="works"
@@ -745,7 +745,7 @@
 											</tr>
 											<tr>
 												<td height="30" align="right" class="title">
-													<strong> 在校或工作期间 受过何种处分: </strong>
+													<strong> 受过何种处分: </strong>
 												</td>
 												<td height="30" align="left" class="content_L">
 													<textarea name="o.disposal" cols="46" rows="2"
@@ -768,6 +768,7 @@
 												<td height="30" align="left" class="content_L">
 													<textarea name="o.cerificate" cols="46" rows="2"
 														id="cerificate" onkeyup="CtoH(this)"></textarea>
+													<span class="style1">所填证书需提供原件，现场信息确认时交审</span>
 												</td>
 											</tr>
 											<tr>
