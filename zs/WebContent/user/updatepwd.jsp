@@ -192,26 +192,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 align="center" height="87" style="width: 387px; height: 87px;margin-bottom: 150px;margin-top: 100px;" class="table">
 				<tbody>
 					<tr>
-						<td align="center" class="content_L">
-						&nbsp;&nbsp;请输入旧密码:<input type="password" name="oldPwd" id="pwd0"><font color="red">${errorMsg }</font>
+						<td align="right" class="content_L">
+							请输入旧密码:
 						</td>
+						<td align="left" class="content_L"><input type="password" name="oldPwd" id="pwd0"></td>
+						<td align="left" class="content_L"><font color="red">${errorMsg }</font></td>
+					</tr>
+					<tr>
+						<td align="right" class="content_L">
+							请输入新密码:
+						</td>
+						<td align="left" class="content_L"><input type="password" name="o.password" id="pwd1"></td>
+						<td align="left" class="content_L"></td>
+					</tr>
+					<tr>
+						<td align="right" class="content_L">
+							再次输入新密码:
+						</td>
+						<td align="left" class="content_L"><input type="password" id="pwd2"></td>
+						<td align="left" class="content_L"></td>
 					</tr>
 					<tr>
 						<td align="center" class="content_L">
-						&nbsp;&nbsp;请输入密码:<input type="password" name="o.password" id="pwd1">
-						</td>
-					</tr>
-					<tr>
-						<td align="center" class="content_L">
-						再次输入密码:<input type="password" id="pwd2">	
-						</td>
-					</tr>
-					<tr>
-						<td align="center" class="content_L">
-							<input type="submit" value="保存" class="f_btn01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="button" value="放弃修改" onclick="dropUpdate()"  class="f_btn01">
+							<input type="submit" value="保存" class="f_btn01">
 							<input type="hidden" name="o.id" value="${sessionScope.o.id }"> 
 						</td>
+						<td align="center" class="content_L"><input type="button" value="放弃修改" onclick="dropUpdate()"  class="f_btn01"></td>
+						<td align="center" class="content_L"></td>
 					</tr>
 				</tbody>
 			</table>
