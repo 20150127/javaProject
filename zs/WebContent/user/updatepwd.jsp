@@ -97,6 +97,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				$("#pwd1").select();
 				return false;
 			}
+			if(regNull.test($("#pwd0").val())){
+				alert("请输入密码!!!");
+				$("#pwd0").select();
+				return false;
+			}
 			if($("#pwd1").val().length < 6){
 				alert("新密码不得少于6位!!!!");
 				$("#pwd1").select();
@@ -186,6 +191,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<table width="387" cellspacing="0" cellpadding="0" border="1"
 				 align="center" height="87" style="width: 387px; height: 87px;margin-bottom: 150px;margin-top: 100px;" class="table">
 				<tbody>
+					<tr>
+						<td align="center" class="content_L">
+						&nbsp;&nbsp;请输入旧密码:<input type="password" name="oldPwd" id="pwd0"><font color="red">${errorMsg }</font>
+						</td>
+					</tr>
 					<tr>
 						<td align="center" class="content_L">
 						&nbsp;&nbsp;请输入密码:<input type="password" name="o.password" id="pwd1">

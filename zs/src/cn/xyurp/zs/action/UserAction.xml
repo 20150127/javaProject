@@ -57,6 +57,7 @@
 	 	
 	 	<action name="updatepwd" class="userAction" method="updatepwd">
 	 		<result name="success">/user/update_success.jsp</result>
+	 		<result name="error">/user/updatepwd.jsp</result>
 	 		<result name="notLogin">/user/notLogin.jsp</result>
 	 	</action>
 	 	

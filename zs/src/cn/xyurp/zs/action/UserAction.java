@@ -75,6 +75,9 @@ public class UserAction extends BaseAction {
 	private File file;
 	private String fileFileName;
 	private String fileContentType;
+	
+	//旧密码
+	private String oldPwd;
 	private final static String UPLOADDIR = "/upload";
 
 	
@@ -273,8 +276,13 @@ public class UserAction extends BaseAction {
 		Score obj = scoreService.findByIDCard(IDCard);
 		String str = "";
 		if(obj != null){
-			scoreService.updatePwd(o.getId(), o.getPassword());
-			str = SUCCESS;
+			if(oldPwd!=null && oldPwd.trim().equals(obj.getPassword())){
+				scoreService.updatePwd(o.getId(), o.getPassword());
+				str = SUCCESS;
+			}else{
+				getRequest().setAttribute("errorMsg", "旧密码不正确！");
+				str = "error";
+			}
 		}else{
 			str = "notLogin";
 		}
@@ -508,4 +516,13 @@ public class UserAction extends BaseAction {
 	    this.svs = svs;
 	}
 
+	public String getOldPwd() {
+		return oldPwd;
+	}
+
+	public void setOldPwd(String oldPwd) {
+		this.oldPwd = oldPwd;
+	}
+
+	
 }
