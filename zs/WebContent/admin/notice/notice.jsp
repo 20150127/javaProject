@@ -190,7 +190,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <table width="1038px;" align="center" border="0" cellspacing="0" cellpadding="0" >
   <tr>
     <td height="30" align="center" valign="middle" background="<%=request.getContextPath()%>/images/bubg.jpg">
-    <p style=" color:#FFFFFF; line-height:20px;"><font style="font-size: 12px;">首 钢 工 学 院</font> 
+    <p style=" color:#FFFFFF; line-height:20px;"><font style="font-size: 12px;">北京青年政治学院</font> 
     </p>
     </td>
   </tr>

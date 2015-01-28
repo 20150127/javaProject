@@ -47,6 +47,7 @@
 		<property name="chineseScore" type="java.lang.Double"/>
 		<property name="mathScore" type="java.lang.Double" />
 		<property name="englishScore" type="java.lang.Double" />
+		<property name="ifcredit" type="java.lang.Integer" />
 		<many-to-one name="specialtyId2" class="cn.xyurp.zs.bean.Specialty"></many-to-one>
 	</class>
 	<joined-subclass name="cn.xyurp.zs.bean.Score" table="t_score" extends="cn.xyurp.zs.bean.Examinee">

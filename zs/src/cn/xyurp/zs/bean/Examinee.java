@@ -88,7 +88,17 @@ public class Examinee {
 	private Double chineseScore;
 	private Double mathScore;
 	private Double englishScore;
+	private Integer ifcredit;
 	
+	
+	public Integer getIfcredit() {
+		return ifcredit;
+	}
+
+	public void setIfcredit(Integer ifcredit) {
+		this.ifcredit = ifcredit;
+	}
+
 	public String getKslx() {
 		return kslx;
 	}

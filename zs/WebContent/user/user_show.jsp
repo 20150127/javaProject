@@ -310,11 +310,8 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 					    <td  align="left" colspan="6">${o.specialtyId2.name }</td>
 					    
 					    </tr>
-					  
-					    
-					    
-					  
-						  < tr>
+
+						  <tr>
 						    <td align="middle" height="33">是否同意调剂</td>
 						    <td colspan="6" align="left">
 						    <c:choose>
@@ -323,6 +320,18 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 															</c:when>
 															<c:otherwise>
 																同意 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;不同意 (&nbsp;&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;)
+															</c:otherwise>	
+														</c:choose></td>
+						    </tr>
+						  <tr>
+						    <td align="middle" height="33">是否以笔试满分进入复试</td>
+						    <td colspan="6" align="left">
+						    <c:choose>
+															<c:when test="${o.ifcredit == 1}">
+																是 (&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;否 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+															</c:when>
+															<c:otherwise>
+																是 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;否 (&nbsp;&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;)
 															</c:otherwise>	
 														</c:choose></td>
 						    </tr>
@@ -496,6 +505,18 @@ window.location.href="<%=request.getContextPath()%>/examinee/zt.action?kch="+kc;
 															</c:when>
 															<c:otherwise>
 																同意 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;不同意 (&nbsp;&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;)
+															</c:otherwise>	
+														</c:choose></td>
+						    </tr>
+						  <tr>
+						    <td align="middle">是否以笔试满分进入复试</td>
+						    <td colspan="6" align="left">
+						    <c:choose>
+															<c:when test="${o.ifcredit == 1}">
+																是(&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;否(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+															</c:when>
+															<c:otherwise>
+																是 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;否 (&nbsp;&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;)
 															</c:otherwise>	
 														</c:choose></td>
 						    </tr>
