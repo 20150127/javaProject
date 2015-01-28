@@ -921,8 +921,8 @@
 															<option value="${specialty.id}">${specialty.name}</option>
 														</c:forEach>
 													</select>
-											<span class="style1">**请慎重选择专业，选择之后无法修改!</span>
-											<input name="o.ifAdjust" id="tj_1" type="hidden" value="1">
+													<span class="style1">**请慎重选择专业，选择之后无法修改!</span>
+											<!-- <input name="o.ifAdjust" id="tj_1" type="hidden" value="1"> -->
 												</td>
 											</tr>
 											<tr>
@@ -931,11 +931,11 @@
 												</td>
 												<td height="30" align="left" class="content_L">
 													<label for="tj_1">
-														<input name="o.ifAdjust" id="tj_1" type="radio" value="1" checked>是
+														<input name="o.ifAdjust" id="tj_1" type="radio" value="1" checked="checked" />是
 													</label>
 &nbsp;&nbsp;&nbsp;&nbsp;
 													<label for="tj_2">
-														<input name="o.ifAdjust" id="tj_2" type="radio" value="0" >否
+														<input name="o.ifAdjust" id="tj_2" type="radio" value="0" />否
 													</label>
 												</td>
 											</tr>
