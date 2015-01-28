@@ -58,6 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 document.getElementById("td2").style.display="none";
 				 if(me("#condition").val()=='zy'){
 				 	me("#key").val("");
+				 	me("#key3").val("");
 					me("select").get(1).options[0].selected=true;
 					document.getElementById("td3").style.display="";
 					document.getElementById("td1").style.display="none";
@@ -72,6 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 }
 				 if(me("#condition").val()=='zy2'){
 					 	me("#key").val("");
+					 	me("#key2").val("");
 						me("select").get(1).options[0].selected=true;
 						document.getElementById("td3").style.display="none";
 						document.getElementById("td1").style.display="none";
@@ -193,7 +195,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td  class="title"  align="center" >考生号</td>
 				<td  class="title"  align="center" >准考证号</td>
 				<td  class="title"  align="center" >身份证号</td>
-				<td  class="title"  align="center" >报考专业</td>
+				<td  class="title"  align="center" >报考专业1</td>
+				<td  class="title"  align="center" >报考专业2</td>
 				<td  class="title"  align="center" >修改</td>
 				<td  class="title"  align="center" >生成准考证号</td>
 				<td  class="title"  align="center" >打印准考证</td>
@@ -212,6 +215,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td align="center" class="content_L">${examinee.admissionId}</td>
 				<td align="center" class="content_L">${examinee.IDCardNum}</td>
 				<td align="center" class="content_L">${examinee.specialtyId.name}</td>
+				<td align="center" class="content_L">${examinee.specialtyId2.name}</td>
 				<td align="center" class="content_L">
 				
 				
@@ -287,6 +291,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	          <td align="center" class="content_L">&nbsp;</td>
 	          <td align="center" class="content_L">&nbsp;</td>
 	       	  <td align="center" class="content_L">&nbsp;</td>
+	          <td align="center" class="content_L">&nbsp;</td>
 	          <td align="center" class="content_L">&nbsp;</td>
 	          <td align="center" class="content_L">&nbsp;</td>
 	          <td align="center" class="content_L">&nbsp;</td>
