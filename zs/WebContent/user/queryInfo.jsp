@@ -166,7 +166,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<c:choose>
 			<c:when test="${sysv.ifPreliminary eq 1}">
 			<tr>
-				<td align="center" class="title" rowspan="6">初<br/>试<br/>成<br/>绩</td>
+				<td align="center" class="title" rowspan="6">录<br/>取<br/>结<br/>果</td>
 				<td align="center" class="title">笔试成绩</td>
 				<td class="content_L">&nbsp;${o.bjyw+o.bjsx+o.bjyy}</td>
 			</tr>
