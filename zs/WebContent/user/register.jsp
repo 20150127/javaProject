@@ -946,6 +946,37 @@
 							</tr>
 						</table>
 						<br>
+						<table width="100%" height="15" border="0" cellpadding="0"
+							cellspacing="0" class="table">
+							<tr>
+								<td height="12" align="center" valign="top" class="content_L">
+									<fieldset>
+										<legend>
+											<strong><strong> 特许申请:</strong> </strong>
+										</legend>
+										<table width="744" height="11" border="0" cellpadding="0"
+											cellspacing="0" class="table">
+											<tr>
+												<td width="30%" height="10" align="center" class="title">
+													<strong> 是否符合以笔试满分进入面试: </strong>
+												</td>
+												<td height="10" align="left" class="content_L">
+													<label for="tj_1">
+														<input name="o.ifcredit" id="tj_1" type="radio" value="1" />是
+													</label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+													<label for="tj_2">
+														<input name="o.ifcredit" id="tj_2" type="radio" value="0" checked="checked"  />否
+													</label>
+												</td>
+											</tr>
+											
+										</table>
+									</fieldset>
+								</td>
+							</tr>
+						</table>
+						<br/>
 						<table width="100%" height="153" border="0" cellpadding="0"
 							cellspacing="0" class="table">
 							<tr>
