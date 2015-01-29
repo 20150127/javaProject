@@ -19,37 +19,61 @@
 		 	 document.getElementById("td1").style.display="";
 		 	 document.getElementById("td2").style.display="none";
 		 	 document.getElementById("td3").style.display="none";
+		 	 document.getElementById("td4").style.display="none";
 			}
 			if(me("#condition").val()=='zy'){
 		 	 document.getElementById("td1").style.display="none";
 		 	 document.getElementById("td2").style.display="none";
 		 	 document.getElementById("td3").style.display="";
+		 	 document.getElementById("td4").style.display="none";
+			}
+			if(me("#condition").val()=='zy2'){
+			 	document.getElementById("td1").style.display="none";
+			 	document.getElementById("td2").style.display="none";
+			 	document.getElementById("td3").style.display="none";
+			 	document.getElementById("td4").style.display="";
 			}
 		});
 		function set(){
-			if(me("#condition").val()=='zy' || me("#condition").val()=='kl'){
+			
+			
+			if(me("#condition").val()=='zy' || me("#condition").val()=='kl' || me ("#condition").val()=='zy2'){
 				 document.getElementById("td2").style.display="none";
 				 if(me("#condition").val()=='zy'){
-					me("#key").val("");
+				 	me("#key").val("");
+				 	me("#key3").val("");
 					me("select").get(1).options[0].selected=true;
 					document.getElementById("td3").style.display="";
 					document.getElementById("td1").style.display="none";
+					document.getElementById("td4").style.display="none";
 				 }
 				 if(me("#condition").val()=='kl'){
-					me("#key").val("");
+				 	me("#key").val("");
 					me("select").get(2).options[0].selected=true;
 					document.getElementById("td1").style.display="";
 					document.getElementById("td3").style.display="none";
+					document.getElementById("td4").style.display="none";
 				 }
+				 if(me("#condition").val()=='zy2'){
+					 	me("#key").val("");
+					 	me("#key2").val("");
+						me("select").get(1).options[0].selected=true;
+						document.getElementById("td3").style.display="none";
+						document.getElementById("td1").style.display="none";
+						document.getElementById("td4").style.display="";
+					 }
 			}
-			
-			if(me("#condition").val()!='zy' && me("#condition").val()!='kl'){
+			if(me("#condition").val()!='zy' && me("#condition").val()!='kl' && me("#condition").val()!='zy2'){
 				me("select").get(1).options[0].selected=true;
 				me("select").get(2).options[0].selected=true;
+				me("select").get(3).options[0].selected=true;
+				document.getElementById("td4").style.display="none";
 				document.getElementById("td3").style.display="none";
 				document.getElementById("td1").style.display="none";
 				document.getElementById("td2").style.display="";
 			}
+			
+			
 		}
 		
 		function toExport(){
@@ -63,6 +87,8 @@
 				key = me("#key1").val();
 			}else if(condition == "zy"){
 				key = me("#key2").val();
+			}else if(condition == "zy2"){
+				key = me("#key3").val();
 			}else if(condition == "IDCardNum"){
 				key = me("#key").val();
 			}else if(condition == "admissionId"){
@@ -70,8 +96,8 @@
 			}else{
 				alert("查询项错误!");
 			}
-			var url = "<%=request.getContextPath()%>/bj/toExport.action?condition="+condition+"&key="+encodeURI(encodeURI(key));
-			openWin(url,'笔试成绩',600,180,1);
+			var url = "<%=request.getContextPath()%>/export/toExport.action?condition="+condition+"&key="+encodeURI(encodeURI(key));
+			openWin(url,'考生导出',800,380,1);
 		}
 		</script>
 	</head>
@@ -88,8 +114,9 @@
 							<option value="name" <c:if test="${condition eq 'name' }">selected</c:if>>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</option>
 							<option value="kl" <c:if test="${condition eq 'kl' }">selected</c:if>>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类</option>
 							<c:if test="${empty user.specialty}">
-								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业</option>
+								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业1</option>
 							</c:if>
+							<option value="zy" <c:if test="${condition eq 'zy2' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业2</option>
 							<option value="IDCardNum" <c:if test="${condition eq 'IDCardNum' }">selected</c:if>>身份证号</option>
 							<option value="admissionId" <c:if test="${condition eq 'admissionId' }">selected</c:if>>准考证号</option>
 						</select>
@@ -102,15 +129,25 @@
 							<option value="9" <c:if test="${key1 eq '9' }">selected</c:if>>单考</option>
 						</select>
 					</td>
-					<td class="content_L"  align="left" id="td2">
+					<td class="content_L"  align="left" id="td2" >
 						<input type="text" name="key" id="key" value="${key}" class="f_input">
 					</td>
 					<td class="content_L"  align="left" id="td3" style="display: none">
-						<select name="key2" id="key2" class="f_select" style="width:85px;" >
+						<select name="key2" id="key2" class="f_select" style="width:210px;" >
 							<option value="0" <c:if test="${key2 eq '0' }">selected</c:if>>全部</option>
 							<c:forEach items="${specialtys}" var="sss">
 								
 							<option value="${sss.code}" <c:if test="${key2 eq sss.code }">selected</c:if>>${sss.name}</option>
+							
+							</c:forEach>
+						</select>
+					</td>
+					<td class="content_L"  align="left" id="td4" style="display: none">
+						<select name="key3" id="key3" class="f_select" style="width:210px;" >
+							<option value="0" <c:if test="${key3 eq '0' }">selected</c:if>>全部</option>
+							<c:forEach items="${specialtys}" var="sss">
+								
+							<option value="${sss.code}" <c:if test="${key3 eq sss.code }">selected</c:if>>${sss.name}</option>
 							
 							</c:forEach>
 						</select>
@@ -166,7 +203,15 @@
 
 					</td>
 					<td class="title" align="center" class="content_L">
-						报考专业
+						报考专业1
+
+
+
+
+
+					</td>
+					<td class="title" align="center" class="content_L">
+						报考专业2
 
 
 
@@ -183,7 +228,15 @@
 						英语成绩
 					</td>
 					<td class="title" align="center" class="content_L">
-						笔试总成绩
+						笔试成绩
+
+
+
+
+
+					</td>
+					<td class="title" align="center" class="content_L">
+						笔试计算成绩
 
 
 
@@ -222,6 +275,9 @@
 							</td>
 							<td align="center" class="content_L">
 								${score.specialtyId.name }
+							</td>
+							<td align="center" class="content_L">
+								${score.specialtyId2.name }
 							</td>
 							<td align="center" class="content_L">
 								<c:choose>
@@ -263,6 +319,10 @@
 									</c:otherwise>
 								</c:choose>
 							</td>
+							<td align="center" class="content_L">
+							
+							
+							</td>
 							
 							<td align="center" class="content_L">
 									<c:choose>
@@ -281,6 +341,12 @@
 
 				<c:forEach var="i" begin="${my:length(page.datas)}" end="${ps-1}">
 					<tr>
+						<td align="center" class="content_L">
+							&nbsp;
+						</td>
+						<td align="center" class="content_L">
+							&nbsp;
+						</td>
 						<td align="center" class="content_L">
 							&nbsp;
 						</td>
