@@ -205,7 +205,9 @@
 					<td class="title" align="center" class="content_L">考生号</td>
 					<td class="title" align="center" class="content_L">准考证号</td>
 					<td class="title" align="center" class="content_L">身份证号</td>
-					<td class="title" align="center" class="content_L">报考专业</td>
+					<td class="title" align="center" class="content_L">报考专业1</td>
+					<td class="title" align="center" class="content_L">报考专业2</td>
+					<td class="title" align="center" class="content_L">考生类别</td>
 					<td class="title" align="center" class="content_L">笔试成绩</td>
 					<td class="title" align="center" class="content_L">会考成绩</td>
 					<td class="title" align="center" class="content_L">评定成绩</td>
@@ -242,6 +244,17 @@
 							</td>
 							<td align="center" class="content_L">
 								${score.specialtyId.name}
+							</td>
+							<td align="center" class="content_L">
+								${score.specialtyId2.name}
+							</td>
+							<td align="center" class="content_L">
+									<c:if test="${score.examineeType==1}">
+										城镇
+									</c:if>
+									<c:if test="${score.examineeType==2}">
+										农村
+									</c:if>
 							</td>
 							<td align="center" class="content_L">
 							<c:choose>
