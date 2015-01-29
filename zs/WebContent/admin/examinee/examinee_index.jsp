@@ -197,6 +197,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td  class="title"  align="center" >身份证号</td>
 				<td  class="title"  align="center" >报考专业1</td>
 				<td  class="title"  align="center" >报考专业2</td>
+				<td  class="title"  align="center" >语文</td>
+				<td  class="title"  align="center" >数学</td>
+				<td  class="title"  align="center" >英语</td>
+				<td  class="title"  align="center" >考生类别</td>
 				<td  class="title"  align="center" >修改</td>
 				<td  class="title"  align="center" >生成准考证号</td>
 				<td  class="title"  align="center" >打印准考证</td>
@@ -216,6 +220,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td align="center" class="content_L">${examinee.IDCardNum}</td>
 				<td align="center" class="content_L">${examinee.specialtyId.name}</td>
 				<td align="center" class="content_L">${examinee.specialtyId2.name}</td>
+				<td align="center" class="content_L">${examinee.chineseScore}</td>
+				<td align="center" class="content_L">${examinee.mathScore}</td>
+				<td align="center" class="content_L">${examinee.englishScore}</td>
+				<td align="center" class="content_L">
+					
+					<c:if test="${examinee.examineeType==1}">
+						城镇
+					</c:if>
+					<c:if test="${examinee.examineeType==2}">
+						农村
+					</c:if>
+				</td>
 				<td align="center" class="content_L">
 				
 				
