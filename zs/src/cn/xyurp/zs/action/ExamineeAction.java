@@ -74,6 +74,7 @@ public class ExamineeAction extends BaseAction {
 	private String key1;
 	private String key2;
 	private String key3;
+	private String key4;
 	
 	@SuppressWarnings("unused")
 	private List<XB> xb;
@@ -137,9 +138,9 @@ public class ExamineeAction extends BaseAction {
 			hql.append(" and s.specialtyId2.code='"+key3+"'");
 		    }
 		    
-		    if(key!=null && !"".equals(key.trim()) || !"0".equals(key1) ){
+		    if(key!=null && !"".equals(key.trim()) || !"0".equals(key1) || !"0".equals(key4)){
 			if(condition!=null && !"".equals(condition.trim())){
-			    if("0".equals(key1)){
+			    if("0".equals(key1)||"0".equals(key4)){
 				key=MyConstants.vd(key.trim());
 			    }
 			    if("name".equals(condition)){
@@ -150,8 +151,10 @@ public class ExamineeAction extends BaseAction {
 				hql.append(" and s.examineeNum like '%"+key+"%'");
 			    }else if("admissionId".equals(condition)){
 				hql.append(" and s.admissionId like '%"+key+"%'");
-			    }else{
+			    }else if("kl".equals(condition)){
 				hql.append(" and s.kl='" + key1 + "'");
+			    }else{
+			    	hql.append(" and s.examineeType='"+key4+"'");
 			    }
 			}
 		    }
@@ -175,10 +178,14 @@ public class ExamineeAction extends BaseAction {
 		    }else{
 			getRequest().setAttribute("key3", 0);
 		    }
+		    if(key4!=null){
+		    	getRequest().setAttribute("key4", key4);
+		    }else{
+		    	getRequest().setAttribute("key4", 0);
+		    }
 		    getRequest().setAttribute("condition", condition);
 		    getRequest().setAttribute("specialtys",specialtyService.findAll());
 		    getRequest().setAttribute("specialtys2",specialtyService.findAll());
-		    
 		return SUCCESS;
 	}
 	public String sjtj() throws Exception{
@@ -634,6 +641,14 @@ public class ExamineeAction extends BaseAction {
 
 	public void setProperties(String[] properties) {
 		this.properties = properties;
+	}
+
+	public String getKey4() {
+		return key4;
+	}
+
+	public void setKey4(String key4) {
+		this.key4 = key4;
 	}
 	
 	
