@@ -116,7 +116,7 @@
 							<c:if test="${empty user.specialty}">
 								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业1</option>
 							</c:if>
-							<option value="zy" <c:if test="${condition eq 'zy2' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业2</option>
+							<option value="zy2" <c:if test="${condition eq 'zy2' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业2</option>
 							<option value="IDCardNum" <c:if test="${condition eq 'IDCardNum' }">selected</c:if>>身份证号</option>
 							<option value="admissionId" <c:if test="${condition eq 'admissionId' }">selected</c:if>>准考证号</option>
 						</select>
