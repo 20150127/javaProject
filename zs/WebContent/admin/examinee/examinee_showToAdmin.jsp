@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <table width="628" border="1" align="center" cellpadding="0"
 			cellspacing="0">
 			<caption>	
-							         <h2><strong><br><br>${sysv.registerTitle }年首钢工学院<br>高等职业教育自主招生报名表</strong></h2>
+							         <h2><strong><br><br>2015北京青年政治学院<br>高等职业教育自主招生报名表</strong></h2>
 						    <div align="left">考生号：${o.examineeNum }</div>
 						</caption>
 			<tr>
@@ -171,6 +171,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</td>
 						</tr>
 						<tr align="center">
+							<td height="30" colspan="2" nowrap>
+								语文
+
+
+
+
+
+
+							</td>
+							<td height="30" nowrap>
+								${o.chineseScore }
+							</td>
+							<td height="30" nowrap>
+								数学
+							</td>
+							<td height="30" nowrap>
+								${o.mathScore }
+							</td>
+							<td height="30" nowrap>
+								英语
+
+
+
+
+
+
+							</td>
+							<td height="30" nowrap>
+								${o.englishScore }
+							</td>
+						</tr>
+						<tr align="center">
 							<td height="55" colspan="2" nowrap>
 								在校担任社会工作
 							</td>
@@ -224,7 +256,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							
 						</tr>
 						
-						<!--tr align="center">
+						<tr align="center">
 							<td height="30" colspan="2" nowrap>
 								是否同意调剂
 							</td>
@@ -238,7 +270,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</c:otherwise>	
 								</c:choose>
 							</td>
-						</tr-->
+						</tr>
+						<tr>
+						    <td align="center" colspan="2">是否以笔试满分进入复试</td>
+						    <td colspan="5" align="center">
+						    <c:choose>
+															<c:when test="${o.ifcredit == 1}">
+																是(&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;否(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+															</c:when>
+															<c:otherwise>
+																是 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;否 (&nbsp;&nbsp;&nbsp;&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;)
+															</c:otherwise>	
+														</c:choose></td>
+						    </tr>
 					</table>
 				</td>
 			</tr>
