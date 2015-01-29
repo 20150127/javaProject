@@ -36,6 +36,7 @@ public class BJAction extends BaseAction {
 	private String key;
 	private String key1;
 	private String key2;
+	private String key3;
 	private SpecialtyService specialtyService;
 	private String fileName = "";
 	private String[] properties;
@@ -45,6 +46,13 @@ public class BJAction extends BaseAction {
 
 	public void setKey2(String key2) {
 	    this.key2 = key2;
+	}
+	public String getKey3() {
+		return key3;
+	}
+	
+	public void setKey3(String key3) {
+		this.key3 = key3;
 	}
 	public String toImport(){
 	    return SUCCESS;
@@ -109,11 +117,21 @@ public class BJAction extends BaseAction {
 	    StringBuffer hql = new StringBuffer();
 	    SysUser user=(SysUser)getRequest().getSession().getAttribute("user");
 	    hql.append("from Score s where (s.admissionId is not null and s.admissionId <>' ')");
+	    
 	    if(user!=null && user.getSpecialty()!=null){
-		hql.append(" and s.specialtyId.id="+user.getSpecialty().getId());
+	    	hql.append(" and s.specialtyId.id="+user.getSpecialty().getId());
 	    }else if(key2!=null && !"0".equals(key2)){
-		hql.append(" and s.specialtyId.code='"+key2+"'");
+	    	hql.append(" and s.specialtyId.code='"+key2+"'");
+	    }else if(key3!=null && !"0".equals(key3)){
+	    	hql.append(" and s.specialtyId2.code='"+key3+"'");
 	    }
+	    System.out.println("000000000000000000000000");
+	    System.out.println("000000000000000000000000");
+	    System.out.println("000000000000000000000000");
+	    System.out.println("000000000000000000000000");
+	    System.out.println("000000000000000000000000");
+	    System.out.println(key3);
+	    System.out.println(hql);
 	    if(key!=null && !"".equals(key.trim()) || !"0".equals(key1) ){
 		if(condition!=null && !"".equals(condition.trim())){
 		    if("0".equals(key1)){
@@ -148,6 +166,11 @@ public class BJAction extends BaseAction {
 		getRequest().setAttribute("key2", key2);
 	    }else{
 		getRequest().setAttribute("key2", 0);
+	    }
+	    if(key3!=null){
+		getRequest().setAttribute("key3", key3);
+	    }else{
+		getRequest().setAttribute("key3", 0);
 	    }
 	    getRequest().setAttribute("condition", condition);
 	    getRequest().setAttribute("specialtys",specialtyService.findAll());
