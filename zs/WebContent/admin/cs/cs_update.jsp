@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-		<title>测试成绩编辑</title>
+		<title>面试成绩编辑</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	    <link href="<%=request.getContextPath() %>/css/methodfish.css" rel="stylesheet" type="text/css">
 		<link href="<%=request.getContextPath() %>/css/calendar_tas.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<tr>
 					<td class="content_L">
 					<div align="left" style="float: left;width: 50%;">
-						<img src="<%=request.getContextPath() %>/images/xiushi_04.gif" width="13" height="13"><b>测试成绩</b>
+						<img src="<%=request.getContextPath() %>/images/xiushi_04.gif" width="13" height="13"><b>面试成绩</b>
 					</div>
 					<div  align="right">
 					<c:if test="${xy:hasPermission(user.id,'cs',2)}">

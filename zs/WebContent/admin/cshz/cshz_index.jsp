@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>初试成绩管理</title>
+		<title>总成绩管理</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link href="<%=request.getContextPath()%>/css/methodfish.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
@@ -108,7 +108,7 @@
 				alert("查询项错误!");
 			}
 			var url = "<%=request.getContextPath()%>/cshz/toExport.action?condition="+condition+"&key="+encodeURI(encodeURI(key));
-			openWin(url,'初试成绩汇总',600,180,1);
+			openWin(url,'总成绩汇总',600,180,1);
 		}
 		</script>
 	</head>
@@ -123,7 +123,7 @@
 							<option value="name" <c:if test="${condition eq 'name' }">selected</c:if>>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</option>
 							<option value="kl" <c:if test="${condition eq 'kl' }">selected</c:if>>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类</option>
 							<c:if test="${empty user.specialty}">
-								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业</option>
+								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业1</option>
 							</c:if>
 							<option value="fs" <c:if test="${condition eq 'fs' }">selected</c:if>>进入复试</option>
 							<option value="IDCardNum" <c:if test="${condition eq 'IDCardNum' }">selected</c:if>>身份证号</option>
@@ -182,17 +182,17 @@
 					<td class="title" align="center" class="content_L">考生号</td>
 					<td class="title" align="center" class="content_L">准考证号</td>
 					<td class="title" align="center" class="content_L">身份证号</td>
-					<td class="title" align="center" class="content_L">报考专业</td>
+					<td class="title" align="center" class="content_L">报考专业1</td>
 					<td class="title" align="center" class="content_L">语文</td>
 					<td class="title" align="center" class="content_L">数学</td>
 					<td class="title" align="center" class="content_L">英语</td>
-					<td class="title" align="center" class="content_L">会考成绩</td>
-					<td class="title" align="center" class="content_L">评定成绩</td>
-					<td class="title" align="center" class="content_L">特长成绩</td>
-					<td class="title" align="center" class="content_L">测试成绩</td>
-					<td class="title" align="center" class="content_L">初试总分</td>
-					<td class="title" align="center" class="content_L">是否复试</td>
-					<td  class="title"  align="center" class="content_L" >选择<input type="checkbox" name="checkboxs" class="f_checkbox" onClick="quanxuan(document.myform,'delId',this);"></td>
+					<td class="title" align="center" class="content_L">笔试成绩</td>
+					<td class="title" align="center" class="content_L">面试成绩</td>
+					<td class="title" align="center" class="content_L">推介及证明材料加分成绩</td>
+<!-- 					<td class="title" align="center" class="content_L">测试成绩</td> -->
+					<td class="title" align="center" class="content_L">总成绩</td>
+<!-- 					<td class="title" align="center" class="content_L">是否复试</td> -->
+<!-- 					<td  class="title"  align="center" class="content_L" >选择<input type="checkbox" name="checkboxs" class="f_checkbox" onClick="quanxuan(document.myform,'delId',this);"></td> -->
 				</tr>
 
 				<c:if test="${!empty page.datas}">
@@ -250,36 +250,40 @@
 								</c:otherwise>
 							</c:choose>
 							</td>
+							<!-- 笔试总成绩 -->
 							<td align="center" class="content_L">
 							<c:choose>
-								<c:when test="${my:endsWith(score.hkzongfen,'.0')}">
-									<fmt:formatNumber value="${score.hkzongfen}" pattern="0"/>
+								<c:when test="${my:endsWith(score.bjyw+score.bjsx+score.bjyy,'.0')}">
+									<fmt:formatNumber value="${score.bjyw+score.bjsx+score.bjyy}" pattern="0"/>
 								</c:when>
 								<c:otherwise>
-									${score.hkzongfen}
+									${score.bjyw+score.bjsx+score.bjyy}
 								</c:otherwise>
 							</c:choose>	
 							</td>
+							<!-- 面试成绩 -->
 							<td align="center" class="content_L">
 							<c:choose>
-								<c:when test="${my:endsWith(score.zonghecj,'.0')}">
-									<fmt:formatNumber value="${score.zonghecj}" pattern="0"/>
+								<c:when test="${my:endsWith(score.cs,'.0')}">
+									<fmt:formatNumber value="${score.cs}" pattern="0"/>
 								</c:when>
 								<c:otherwise>
-									${score.zonghecj}
+									${score.cs}
 								</c:otherwise>
 							</c:choose>
 							</td>
+							<!-- 推介及证明材料加分成绩 -->
 							<td align="center" class="content_L">
 						<c:choose>
-								<c:when test="${my:endsWith(score.techangcj,'.0')}">
-									<fmt:formatNumber value="${score.techangcj}" pattern="0"/>
+								<c:when test="${my:endsWith(score.fushicj,'.0')}">
+									<fmt:formatNumber value="${score.fushicj}" pattern="0"/>
 								</c:when>
 								<c:otherwise>
-									${score.techangcj}
+									${score.fushicj}
 								</c:otherwise>
 							</c:choose>
 							</td>
+							<!-- 
 							<td align="center" class="content_L">
 						<c:choose>
 								<c:when test="${my:endsWith(score.cs,'.0')}">
@@ -290,10 +294,11 @@
 								</c:otherwise>
 							</c:choose>
 							</td>
+							 -->
 							<td align="center" class="content_L">
-							${score.bjyw+score.bjsx+score.bjyy+score.hkzongfen+score.zonghecj+score.techangcj+score.cs}
+							${(score.bjyw+score.bjsx+score.bjyy)*0.2 + score.cs*0.6 + score.fushicj}
 							</td>
-							
+							<!-- 
 							<td align="center" class="content_L">
 								<c:choose>
 									<c:when test="${score.ifRetrial==1}">
@@ -311,16 +316,14 @@
 									</c:otherwise>
 								</c:choose>
 							</td>
-							<td align="center" class="content_L"><c:if test="${score.ifRetrial!=1}"><input type="checkbox"  name="delId" id="sid" class="f_checkbox" value="${score.id}"></c:if></td>
+							 -->
+<%-- 							<td align="center" class="content_L"><input type="checkbox"  name="delId" id="sid" class="f_checkbox" value="${score.id}"></td> --%>
 						</tr>
 					</c:forEach>
 				</c:if>
 
 				<c:forEach var="i" begin="${my:length(page.datas)}" end="${ps-1}">
 					<tr>
-						<td align="center" class="content_L">&nbsp;</td>
-						<td align="center" class="content_L">&nbsp;</td>
-						<td align="center" class="content_L">&nbsp;</td>
 						<td align="center" class="content_L">&nbsp;</td>
 						<td align="center" class="content_L">&nbsp;</td>
 						<td align="center" class="content_L">&nbsp;</td>

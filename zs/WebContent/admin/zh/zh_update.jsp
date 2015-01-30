@@ -11,12 +11,12 @@
 <html>
 	<head>
 		<base href="<%=basePath%>">
-		<title>评定成绩管理</title>
+		<title>证书成绩管理</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">
-		<meta http-equiv="description" content="评定成绩管理">
+		<meta http-equiv="description" content="证书成绩管理">
 		<link rel="stylesheet" type="text/css" href="css/Application.css">
 		<link rel="stylesheet" type="text/css" href="css/methodfish.css">
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
@@ -42,7 +42,7 @@
 				<tr>
 					<td class="content_L">
 					<div align="left" style="float: left;width: 50%;">
-						<img src="<%=request.getContextPath() %>/images/xiushi_04.gif" width="13" height="13"><b>评定成绩</b>
+						<img src="<%=request.getContextPath() %>/images/xiushi_04.gif" width="13" height="13"><b>证书成绩</b>
 					</div>
 					<div  align="right">
 					<c:if test="${xy:hasPermission(user.id,'zh',2)}">

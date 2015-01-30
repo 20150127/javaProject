@@ -36,6 +36,8 @@ public class KSLQAction extends BaseAction {
 	private String key1;
 	private String key2;
 	private String key3;
+	private String key4;
+	private String key5;
 	private ScoreService scoreService;
 	private SpecialtyService specialtyService;
 	private String fileName = "";
@@ -54,6 +56,13 @@ public class KSLQAction extends BaseAction {
 
 	public void setKey(String key) {
 	    this.key = key;
+	}
+	public String getKey4() {
+		return key4;
+	}
+	
+	public void setKey4(String key4) {
+		this.key4 = key4;
 	}
 
 	public String getCondition() {
@@ -85,6 +94,8 @@ public class KSLQAction extends BaseAction {
 		hql.append(" and s.specialtyId.id="+user.getSpecialty().getId());
 	    }else if(key2!=null && !"0".equals(key2)){
 		hql.append(" and s.specialtyId.code='"+key2+"'");
+	    }else if(key4!=null&&!"0".equals(key4)){
+	    	hql.append(" and s.specialtyId2.code='"+key4+"'");
 	    }
 	    
 	    if(key3!=null){
@@ -95,7 +106,7 @@ public class KSLQAction extends BaseAction {
 		}
 		getRequest().setAttribute("key3", key3);
 	    }
-	    if(key!=null && !"".equals(key.trim()) || !"0".equals(key1) ){
+	    if(key!=null && !"".equals(key.trim()) || !"0".equals(key1) || !"0".equals(key5) ){
 		if(condition!=null && !"".equals(condition.trim())){
 		    if("0".equals(key1)){
 			key=MyConstants.vd(key.trim());
@@ -108,6 +119,8 @@ public class KSLQAction extends BaseAction {
 			hql.append(" and s.examineeNum like '%"+key+"%'");
 		    }else if("admissionId".equals(condition)){
 			hql.append(" and s.admissionId like '%"+key+"%'");
+		    }else if("studentGroup".equals(condition)){
+		    	hql.append("and s.examineeType='"+key5+"'");
 		    }else{
 			hql.append(" and s.kl='" + key1 + "'");
 		    }
@@ -128,6 +141,16 @@ public class KSLQAction extends BaseAction {
 		getRequest().setAttribute("key2", key2);
 	    }else{
 		getRequest().setAttribute("key2", "0");
+	    }
+	    if(key4!=null){
+	    	getRequest().setAttribute("key4", key4);
+	    }else{
+	    	getRequest().setAttribute("key4", "0");
+	    }
+	    if(key5!=null){
+	    	getRequest().setAttribute("key5", key5);
+	    }else{
+	    	getRequest().setAttribute("key5", "0");
 	    }
 	    getRequest().setAttribute("condition", condition);
 	    getRequest().setAttribute("specialtys",specialtyService.findAll());
@@ -363,7 +386,14 @@ public class KSLQAction extends BaseAction {
 	public void setProperties(String[] properties) {
 		this.properties = properties;
 	}
-	
+
+	public String getKey5() {
+		return key5;
+	}
+
+	public void setKey5(String key5) {
+		this.key5 = key5;
+	}
 	
 	
 }

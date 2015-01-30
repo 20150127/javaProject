@@ -107,222 +107,283 @@
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="KSH"
+						<input type="checkbox" name="properties" value="考生号"
 							checked="checked" id="a">
 						<label for="a">
-							考生号 (KSH)
+							考生号 
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="ZKZH"
+						<input type="checkbox" name="properties" value="准考证号"
 							checked="checked" id="b">
 						<label for="b">
-							准考证号 (ZKZH)
+							准考证号 
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="XM"
+						<input type="checkbox" name="properties" value="姓名"
 							checked="checked" id="c">
 						<label for="c">
-							姓名 (XM)
+							姓名 
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="XBDM"
+						<input type="checkbox" name="properties" value="性别"
 							checked="checked" id="d">
 						<label for="d">
-							性别代码 (XBDM)
+							性别
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="CSNY"
+						<input type="checkbox" name="properties" value="出生年月"
 							checked="checked" id="e">
 						<label for="e">
-							出生年月 (CSNY)
+							出生年月 
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="ZZMMDM"
+						<input type="checkbox" name="properties" value="政治面貌"
 							checked="checked" id="f">
 						<label for="f">
-							政治面貌代码 (ZZMMDM)
+							政治面貌
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="MZDM"
+						<input type="checkbox" name="properties" value="民族"
 							checked="checked" id="g">
 						<label for="g">
-							民族代码 (MZDM)
+							民族
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="KSLBDM"
+						<input type="checkbox" name="properties" value="考生类别"
 							checked="checked" id="h">
 						<label for="h">
-							考生类别代码 (KSLBDM)
+							考生类别
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="BYLBDM"
+						<input type="checkbox" name="properties" value="毕业类别"
 							checked="checked" id="i">
 						<label for="i">
-							毕业类别代码 (BYLBDM)
+							毕业类别
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="KLDM"
+						<input type="checkbox" name="properties" value="科类"
 							checked="checked" id="j">
 						<label for="j">
-							科类代码 (KLDM)
+							科类
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="ZXMC"
+						<input type="checkbox" name="properties" value="中学"
 							checked="checked" id="k">
 						<label for="k">
-							中学名称 (ZXMC)
+							中学名称
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="DQDM"
+						<input type="checkbox" name="properties" value="地区"
 							checked="checked" id="l">
 						<label for="l">
-							地区代码 (DQDM)
+							地区
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="SFZH"
+						<input type="checkbox" name="properties" value="身份证号"
 							checked="checked" id="m">
 						<label for="m">
-							身份证号 (SFZH)
+							身份证号 
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="JTDZ"
+						<input type="checkbox" name="properties" value="家庭地址"
 							checked="checked" id="n">
 						<label for="n">
-							家庭地址 (JTDZ)
+							家庭地址 
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="YZBM"
+						<input type="checkbox" name="properties" value="邮政编码"
 							checked="checked" id="o">
 						<label for="o">
-							邮政编码 (YZBM)
+							邮政编码 
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="LXDH"
+						<input type="checkbox" name="properties" value="联系电话"
 							checked="checked" id="p">
 						<label for="p">
-							联系电话 (LXDH)
+							联系电话
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="HKKH"
+						<input type="checkbox" name="properties" value="会考考号"
 							checked="checked" id="HKKH">
 						<label for="HKKH">
-							会考考号 (HKKH)
+							会考考号
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="KSTC"
+						<input type="checkbox" name="properties" value="考生特长"
 							checked="checked" id="q">
 						<label for="q">
-							考生特长 (KSTC)
+							考生特长
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="KSJLHCF"
+						<input type="checkbox" name="properties" value="考生奖励或处罚"
 							checked="checked" id="r">
 						<label for="r">
-							考生奖励或处罚 (KSJLHCF)
+							考生奖励或处罚
 						</label>
 					</td>
 
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="ZWJD"
+						<input type="checkbox" name="properties" value="自我鉴定"
 							checked="checked" id="ZWJD">
 						<label for="ZWJD">
-							自我鉴定 (ZSYJ)
+							自我鉴定
 						</label>
 					</td>
 
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="KSLX"
+						<input type="checkbox" name="properties" value="考试类型"
 							checked="checked" id="KSLX">
 						<label for="KSLX">
-							考试类型 (KSLX)
+							考试类型
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="CJR"
+						<input type="checkbox" name="properties" value="收件人"
 							checked="checked" id="s">
 						<label for="s">
-							收件人 (CJR)
+							收件人
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="CJ"
+						<input type="checkbox" name="properties" value="总成绩"
 							checked="checked" id="CJ">
 						<label for="CJ">
-							总成绩 (CJ)
+							总成绩
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="LQZY"
+						<input type="checkbox" name="properties" value="录取专业"
 							checked="checked" id="LQZY">
 						<label for="LQZY">
-							录取专业 (LQZY)
+							录取专业
 						</label>
 					</td>
 				<tr>
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="ZYDH1"
+						<input type="checkbox" name="properties" value="专业代码"
 							checked="checked" id="ZYDH1">
 						<label for="ZYDH1">
-							专业代码 (ZYDH1)
+							专业代码
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="YUWEN"
+						<input type="checkbox" name="properties" value="语文"
 							checked="checked" id="YUWEN">
 						<label for="YUWEN">
-							语文 (YUWEN)
+							语文
 						</label>
 					</td>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="SHUXUE"
+						<input type="checkbox" name="properties" value="数学"
 							checked="checked" id="SHUXUE">
 						<label for="SHUXUE">
-							数学 (SHUXUE)
+							数学
 						</label>
 					</td>
 				</tr>	
 				<tr>
 					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="YINGYU"
+						<input type="checkbox" name="properties" value="英语"
 							checked="checked" id="YINGYU">
 						<label for="YINGYU">
-							英语 (YINGYU)
+							英语
 						</label>
 					</td>
 					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="报考专业第一志愿"
+							checked="checked" id="DYZY">
+						<label for="DYZY">
+							报考专业第一志愿
+						</label>
+					</td>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="报考专业第二志愿"
+							checked="checked" id="DEZY">
+						<label for="DEZY">
+							报考专业第二志愿
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="笔试总成绩"
+							checked="checked" id="BSZCJ">
+						<label for="BSZCJ">
+							笔试总成绩
+						</label>
+					</td>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="笔试计算成绩"
+							checked="checked" id="BSJSCJ">
+						<label for="BSJSCJ">
+							笔试计算成绩
+						</label>
+					</td>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="面试成绩"
+							checked="checked" id="MSCJ">
+						<label for="MSCJ">
+							面试成绩
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="证书成绩"
+							checked="checked" id="ZSCJ">
+						<label for="ZSCJ">
+							证书成绩
+						</label>
+					</td>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="高级中等教育阶段成绩"
+							checked="checked" id="GJCJ">
+						<label for="GJCJ">
+							高级中等教育阶段成绩
+						</label>
+					</td>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="推介及证明材料加分成绩"
+							checked="checked" id="TJCJ">
+						<label for="TJCJ">
+							推介及证明材料加分成绩
+						</label>
+					</td>
+				</tr>
+<!-- 					<td width="25%" class="content_L">
 						<input type="checkbox" name="properties" value="HKCJ"
 							checked="checked" id="HKCJ">
 						<label for="HKCJ">
@@ -351,16 +412,35 @@
 						<label for="CSCJ">
 							测试成绩(CSCJ)
 						</label>
-					</td>
-					<td width="25%" class="content_L">
-						<input type="checkbox" name="properties" value="FSCJ"
+					</td> -->
+				<tr>
+				<!-- 	<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="复试成绩"
 							checked="checked" id="FSCJ">
 						<label for="FSCJ">
-							复试成绩 (FSCJ)
+							复试成绩
+						</label>
+					</td> -->
+					
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="申请"
+							checked="checked" id="SQ">
+						<label for="SQ">
+							申请
 						</label>
 					</td>
+					<td width="25%" class="content_L">
+						<input type="checkbox" name="properties" value="特长测试成绩"
+							checked="checked" id="TCCSCJ">
+						<label for="TCCSCJ">
+							特长测试成绩
+						</label>
+					</td>
+					<td width="25%" class="content_L">
+						&nbsp;
+					</td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td width="25%" class="content_L">
 						<input type="checkbox" name="properties" value="CSCJHZ"
 							checked="checked" id="CSCJHZ">
@@ -374,7 +454,7 @@
 					<td width="25%" class="content_L">
 						&nbsp;
 					</td>
-				</tr>
+				</tr> -->
 			</table>
 		</form>
 	</body>

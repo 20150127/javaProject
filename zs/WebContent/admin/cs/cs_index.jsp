@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>测试成绩管理</title>
+		<title>面试成绩管理</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link href="<%=request.getContextPath()%>/css/methodfish.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
@@ -69,7 +69,7 @@
 				alert("查询项错误!");
 			}
 			var url = "<%=request.getContextPath()%>/cs/toExport.action?condition="+condition+"&key="+encodeURI(encodeURI(key));
-			openWin(url,'测试成绩',600,180,1);
+			openWin(url,'面试成绩',600,180,1);
 		}
 		</script>
 	</head>
@@ -84,7 +84,7 @@
 							<option value="name" <c:if test="${condition eq 'name' }">selected</c:if>>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</option>
 							<option value="kl" <c:if test="${condition eq 'kl' }">selected</c:if>>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类</option>
 							<c:if test="${empty user.specialty}">
-								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业</option>
+								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业1</option>
 							</c:if>
 							<option value="IDCardNum" <c:if test="${condition eq 'IDCardNum' }">selected</c:if>>身份证号</option>
 							<option value="admissionId" <c:if test="${condition eq 'admissionId' }">selected</c:if>>准考证号</option>
@@ -132,8 +132,8 @@
 					<td class="title" align="center" class="content_L">考生号</td>
 					<td class="title" align="center" class="content_L">准考证号</td>
 					<td class="title" align="center" class="content_L">考场号</td>
-					<td class="title" align="center" class="content_L">报考专业</td>
-					<td class="title" align="center" class="content_L">测试成绩</td>
+					<td class="title" align="center" class="content_L">报考专业1</td>
+					<td class="title" align="center" class="content_L">面试成绩</td>
 					<td class="title" align="center" class="content_L">操作</td>
 				</tr>
 

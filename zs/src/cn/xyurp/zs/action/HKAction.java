@@ -18,6 +18,7 @@ public class HKAction extends BaseAction {
 	private String key;
 	private String key1;
 	private String key2;
+//	private String key3;
 	private SpecialtyService specialtyService;
  
 	public String getKey2() {
@@ -27,6 +28,13 @@ public class HKAction extends BaseAction {
 	public void setKey2(String key2) {
 	    this.key2 = key2;
 	}
+	/*public String getKey3() {
+		return key3;
+	}
+	
+	public void setKey3(String key3) {
+		this.key3 = key3;
+	}*/
 
 	public void setSpecialtyService(SpecialtyService specialtyService) {
 	    this.specialtyService = specialtyService;
@@ -86,6 +94,9 @@ public class HKAction extends BaseAction {
 	    }else if(key2!=null && !"0".equals(key2)){
 		hql.append(" and s.specialtyId.code='"+key2+"'");
 	    }
+//	    else if(key3!=null && !"0".equals(key3)){
+//			hql.append(" and s.specialtyId2.code='"+key3+"'");
+//	    }
 	    if(key!=null && !"".equals(key.trim()) || !"0".equals(key1) ){
 		if(condition!=null && !"".equals(condition.trim())){
 		    if("0".equals(key1)){
@@ -120,6 +131,11 @@ public class HKAction extends BaseAction {
 	    }else{
 		getRequest().setAttribute("key2", 0);
 	    }
+//	    if(key3!=null){
+//		getRequest().setAttribute("key3", key3);
+//	    }else{
+//		getRequest().setAttribute("key3", 0);
+//	    }
 	    getRequest().setAttribute("condition", condition);
 	    getRequest().setAttribute("specialtys",specialtyService.findAll());
 	    return SUCCESS;

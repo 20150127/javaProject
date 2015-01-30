@@ -157,6 +157,7 @@
 	
 	<bean name="exportAction" class="cn.xyurp.zs.action.ExportAction" scope="prototype">
 		<property name="xbService" ref="xbService"></property>
+		<property name="klService" ref="klService" />
 		<property name="dqService" ref="dqService"></property>
 		<property name="zzmmService" ref="zzmmService"></property>
 		<property name="mzService" ref="mzService"></property>

@@ -42,7 +42,7 @@
 				<tr>
 					<td class="content_L">
 					<div align="left" style="float: left;width: 50%;">
-						<img src="<%=request.getContextPath() %>/images/xiushi_04.gif" width="13" height="13"><b>复试成绩</b>
+						<img src="<%=request.getContextPath() %>/images/xiushi_04.gif" width="13" height="13"><b>介质及证明材料加分成绩</b>
 					</div>
 					<div  align="right">
 					  <c:if test="${xy:hasPermission(user.id,'fs',2)}">
@@ -90,7 +90,7 @@
 				</tr>
 				<tr>	
 					<td class="title" width="15%" align="center">
-						复试成绩
+						证明成绩
 					</td>
 					<td class="content_L">
 					<c:choose>

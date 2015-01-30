@@ -48,53 +48,115 @@
 		 	 document.getElementById("td2").style.display="none";
 		 	 document.getElementById("td3").style.display="none";
 		 	 document.getElementById("td4").style.display="none";
+		 	 document.getElementById("td5").style.display="none";
+		 	document.getElementById("td6").style.display="none";
 			}
 			if(me("#condition").val()=='zy'){
 		 	 document.getElementById("td1").style.display="none";
 		 	 document.getElementById("td2").style.display="none";
 		 	 document.getElementById("td4").style.display="none";
+		 	 document.getElementById("td5").style.display="none";
+		 	 document.getElementById("td6").style.display="none";
 		 	 document.getElementById("td3").style.display="";
 			}
 			if(me("#condition").val()=='lq'){
 		 	 document.getElementById("td1").style.display="none";
 		 	 document.getElementById("td2").style.display="none";
 		 	 document.getElementById("td3").style.display="none";
+		 	 document.getElementById("td5").style.display="none";
+		 	document.getElementById("td6").style.display="none";
 		 	 document.getElementById("td4").style.display="";
+			}
+			if(me("#condition").val()=='zy2'){
+			 	document.getElementById("td1").style.display="none";
+			 	document.getElementById("td2").style.display="none";
+			 	document.getElementById("td3").style.display="none";
+				document.getElementById("td4").style.display="none";
+			 	document.getElementById("td5").style.display="";
+			 	document.getElementById("td6").style.display="none";
+			}
+			if(me("#condition").val()=='studentGroup'){
+			 	document.getElementById("td1").style.display="none";
+			 	document.getElementById("td2").style.display="none";
+			 	document.getElementById("td3").style.display="none";
+				document.getElementById("td4").style.display="none";
+			 	document.getElementById("td5").style.display="none";
+			 	document.getElementById("td6").style.display="";
 			}
 		});
 		function set(){
-			if(me("#condition").val()=='zy' || me("#condition").val()=='kl' || me("#condition").val()=='lq' ){
+			if(me("#condition").val()=='studentGroup' || me("#condition").val()=='zy' || me("#condition").val()=='kl' || me("#condition").val()=='lq' || me("#condition").val()=='zy2' ){
 				 document.getElementById("td2").style.display="none";
 				 if(me("#condition").val()=='zy'){
 					 me("#key").val("");
+					 me("#key4").val("");
 					 me("select").get(1).options[0].selected=true;
-					 me("select").get(3).options[0].selected=true;
+					 me("select").get(4).options[0].selected=true;
+					 me("select").get(5).options[0].selected=true;
 					 document.getElementById("td3").style.display="";
 					 document.getElementById("td1").style.display="none";
 					 document.getElementById("td4").style.display="none";
+					 document.getElementById("td5").style.display="none";
+					 document.getElementById("td6").style.display="none";
+				 }
+				 if(me("#condition").val()=='zy2'){
+					 me("#key").val("");
+					 me("#key2").val("");
+					 me("select").get(1).options[0].selected=true;
+					 me("select").get(4).options[0].selected=true;
+					 me("select").get(5).options[0].selected=true;
+					 document.getElementById("td3").style.display="none";
+					 document.getElementById("td1").style.display="none";
+					 document.getElementById("td4").style.display="none";
+					 document.getElementById("td6").style.display="none";
+					 document.getElementById("td5").style.display="";
 				 }
 				 if(me("#condition").val()=='kl'){
 					 me("#key").val("");
 					 me("select").get(2).options[0].selected=true;
 					 me("select").get(3).options[0].selected=true;
+					 me("select").get(4).options[0].selected=true;
+					 me("select").get(5).options[0].selected=true;
 					 document.getElementById("td1").style.display="";
 					 document.getElementById("td3").style.display="none";
 					 document.getElementById("td4").style.display="none";
+					 document.getElementById("td5").style.display="none";
+					 document.getElementById("td6").style.display="none";
 				 }
 				 if(me("#condition").val()=='lq'){
 					 me("#key").val("");
 					 me("select").get(1).options[0].selected=true;
 					 me("select").get(2).options[0].selected=true;
+					 me("select").get(3).options[0].selected=true;
+					 me("select").get(5).options[0].selected=true;
 					 document.getElementById("td4").style.display="";
 					 document.getElementById("td1").style.display="none";
 					 document.getElementById("td3").style.display="none";
+					 document.getElementById("td5").style.display="none";
+					 document.getElementById("td6").style.display="none";
+				 }
+				 if(me("#condition").val()=='studentGroup'){
+					 me("#key").val("");
+					 me("select").get(1).options[0].selected=true;
+					 me("select").get(2).options[0].selected=true;
+					 me("select").get(3).options[0].selected=true;
+					 me("select").get(4).options[0].selected=true;
+					 document.getElementById("td4").style.display="none";
+					 document.getElementById("td1").style.display="none";
+					 document.getElementById("td3").style.display="none";
+					 document.getElementById("td5").style.display="none";
+					 document.getElementById("td6").style.display="";
 				 }
 			}
-			if(me("#condition").val()!='zy' && me("#condition").val()!='kl' && me("#condition").val()!='lq'){
+			if(me("#condition").val()!='studentGroup' && me("#condition").val()!='zy' && me("#condition").val()!='kl' && me("#condition").val()!='lq'&& me("#condition").val()!='zy2'){
 				me("select").get(1).options[0].selected=true;
 				me("select").get(2).options[0].selected=true;
 				me("select").get(3).options[0].selected=true;
+				me("select").get(4).options[0].selected=true;
+				me("select").get(5).options[0].selected=true;
 				document.getElementById("td4").style.display="none";
+				document.getElementById("td6").style.display="none";
+				document.getElementById("td5").style.display="none";
 				document.getElementById("td3").style.display="none";
 				document.getElementById("td1").style.display="none";
 				document.getElementById("td2").style.display="";
@@ -120,6 +182,10 @@
 				key = me("#key").val();
 			}else if(condition == "lq"){
 				key = me("#key3").val();
+			}else if(condition=="zy2"){
+				key=me("#key4").val();
+			}else if(condition == "studentGroup"){
+				key = me("#key5").val();
 			}else{
 				alert("查询项错误!");
 			}
@@ -139,11 +205,14 @@
 							<option value="name" <c:if test="${condition eq 'name' }">selected</c:if>>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</option>
 							<option value="kl" <c:if test="${condition eq 'kl' }">selected</c:if>>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类</option>
 							<c:if test="${empty user.specialty}">
-								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业</option>
+								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业1</option>
 							</c:if>
+							<option value="zy2" <c:if test="${condition eq 'zy2' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业2</option>
 							<option value="lq" <c:if test="${condition eq 'lq' }">selected</c:if>>是否录取</option>
 							<option value="IDCardNum" <c:if test="${condition eq 'IDCardNum' }">selected</c:if>>身份证号</option>
 							<option value="admissionId" <c:if test="${condition eq 'admissionId' }">selected</c:if>>准考证号</option>
+							<option value="studentGroup"
+							<c:if test="${condition eq 'studentGroup' }">selected</c:if>>考生类别</option>
 						</select>
 					</td>
 					<td class="content_L"  align="left" id="td1" style="display: none">
@@ -167,11 +236,31 @@
 							</c:forEach>
 						</select>
 					</td>
+					<td class="content_L" align="left" id="td5" style="display: none">
+					<select name="key4" id="key4" class="f_select"
+					style="width: 210px;">
+						<option value="0" <c:if test="${key4 eq '0' }">selected</c:if>>全部</option>
+						<c:forEach items="${specialtys}" var="sss">
+
+							<option value="${sss.code}"
+								<c:if test="${key4 eq sss.code }">selected</c:if>>${sss.name}</option>
+
+						</c:forEach>
+					</select>
+				</td>
 					<td class="content_L"  align="left" id="td4" style="display: none">
 						<select name="key3" id="key3" class="f_select" style="width:85px;" >
 							<option value="0" <c:if test="${key3 eq '0' }">selected</c:if>>全部</option>
 							<option value="1" <c:if test="${key3 eq '1' }">selected</c:if>>是</option>
 							<option value="2" <c:if test="${key3 eq '2' }">selected</c:if>>否</option>
+						</select>
+					</td>
+					<td class="content_L" align="left" id="td6" style="display: none">
+						<select name="key5" id="key5" class="f_select"
+						style="width: 210px;">
+							<option value="0" <c:if test="${key5 eq '0' }">selected</c:if>>全部</option>
+							<option value="1" <c:if test="${key5 eq '1' }">selected</c:if>>城镇</option>
+							<option value="2" <c:if test="${key5 eq '2' }">selected</c:if>>农村</option>
 						</select>
 					</td>
 					<td class="content_L"  align="left" width="85%">
@@ -209,12 +298,12 @@
 					<td class="title" align="center" class="content_L">报考专业2</td>
 					<td class="title" align="center" class="content_L">考生类别</td>
 					<td class="title" align="center" class="content_L">笔试成绩</td>
-					<td class="title" align="center" class="content_L">会考成绩</td>
-					<td class="title" align="center" class="content_L">评定成绩</td>
-					<td class="title" align="center" class="content_L">特长成绩</td>
-					<td class="title" align="center" class="content_L">测试成绩</td>
-					<td class="title" align="center" class="content_L">复试成绩</td>
-					<td class="title" align="center" class="content_L">总分</td>
+					<td class="title" align="center" class="content_L">笔试计算成绩</td>
+					<td class="title" align="center" class="content_L">面试成绩</td>
+					<td class="title" align="center" class="content_L">推介及证明材料加分成绩</td>
+<!-- 					<td class="title" align="center" class="content_L">测试成绩</td> -->
+<!-- 					<td class="title" align="center" class="content_L">复试成绩</td> -->
+					<td class="title" align="center" class="content_L">总成绩</td>
 					<td class="title" align="center" class="content_L">操作</td>
 					<td class="title" align="center" class="content_L">打印录取通知书</td>
 					<td  class="title"  align="center" class="content_L" >选择<input type="checkbox" name="checkboxs" class="f_checkbox" onClick="quanxuan(document.myform,'delId',this);"></td>
@@ -256,6 +345,7 @@
 										农村
 									</c:if>
 							</td>
+						<!--笔试成绩 -->
 							<td align="center" class="content_L">
 							<c:choose>
 								<c:when test="${my:endsWith(score.yuwen+score.shuxu+score.yingyu,'.0')}">
@@ -266,6 +356,7 @@
 								</c:otherwise>
 							</c:choose>	
 							</td>
+							<!--笔试计算成绩 -->
 							<td align="center" class="content_L">
 							<c:choose>
 								<c:when test="${my:endsWith(score.hkzongfen,'.0')}">
@@ -276,26 +367,29 @@
 								</c:otherwise>
 							</c:choose>	
 							</td>
+							<!--面试成绩 -->
 							<td align="center" class="content_L">
 							<c:choose>
-								<c:when test="${my:endsWith(score.zonghecj,'.0')}">
-									<fmt:formatNumber value="${score.zonghecj}" pattern="0"/>
+								<c:when test="${my:endsWith(score.cs,'.0')}">
+									<fmt:formatNumber value="${score.cs}" pattern="0"/>
 								</c:when>
 								<c:otherwise>
-									${score.zonghecj}
+									${score.cs}
 								</c:otherwise>
 							</c:choose>
 							</td>
+							<!--推介及证明材料加分成绩 -->
 							<td align="center" class="content_L">
 								<c:choose>
-									<c:when test="${my:endsWith(score.techangcj,'.0')}">
-										<fmt:formatNumber value="${score.techangcj}" pattern="0"/>
+									<c:when test="${my:endsWith(score.fushicj,'.0')}">
+										<fmt:formatNumber value="${score.fushicj}" pattern="0"/>
 									</c:when>
 									<c:otherwise>
-										${score.techangcj}
+										${score.fushicj}
 									</c:otherwise>
 								</c:choose>
 							</td>
+							<!-- 
 							<td align="center" class="content_L">
 								<c:choose>
 									<c:when test="${my:endsWith(score.cs,'.0')}">
@@ -316,8 +410,10 @@
 									</c:otherwise>
 								</c:choose>
 							</td>
+							 -->
+							<!--总成绩 -->
 							<td align="center" class="content_L">
-							<fmt:formatNumber value="${(score.bjyw+score.bjsx+score.bjyy)+score.hkzongfen+(score.zonghecj+score.techangcj)+score.fushicj+score.cs}" pattern="0.00"/>
+							<fmt:formatNumber value="${(score.bjyw+score.bjsx+score.bjyy)*0.2+score.cs*0.6+score.fushicj}" pattern="0.00"/>
 							
 							</td>
 							<td align="center" class="content_L">

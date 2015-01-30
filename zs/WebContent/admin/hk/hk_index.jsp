@@ -63,8 +63,9 @@
 							<option value="name" <c:if test="${condition eq 'name' }">selected</c:if>>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</option>
 							<option value="kl" <c:if test="${condition eq 'kl' }">selected</c:if>>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类</option>
 							<c:if test="${empty user.specialty}">
-								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业</option>
+								<option value="zy" <c:if test="${condition eq 'zy' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业1</option>
 							</c:if>
+<%-- 							<option value="zy2" <c:if test="${condition eq 'zy2' }">selected</c:if>>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业2</option> --%>
 							<option value="IDCardNum" <c:if test="${condition eq 'IDCardNum' }">selected</c:if>>身份证号</option>
 							<option value="admissionId" <c:if test="${condition eq 'admissionId' }">selected</c:if>>准考证号</option>
 						</select>
@@ -77,11 +78,11 @@
 							<option value="9" <c:if test="${key1 eq '9' }">selected</c:if>>单考</option>
 						</select>
 					</td>
-					<td class="content_L"  align="left" id="td2">
+					<td class="content_L"  align="left" id="td2" >
 						<input type="text" name="key" id="key" value="${key}" class="f_input">
 					</td>
 					<td class="content_L"  align="left" id="td3" style="display: none">
-						<select name="key2" id="key2" class="f_select" style="width:85px;" >
+						<select name="key2" id="key2" class="f_select" style="width:210px;" >
 							<option value="0" <c:if test="${key2 eq '0' }">selected</c:if>>全部</option>
 							<c:forEach items="${specialtys}" var="sss">
 								
@@ -90,6 +91,16 @@
 							</c:forEach>
 						</select>
 					</td>
+<!-- 					<td class="content_L"  align="left" id="td4" style="display: none"> -->
+<!-- 						<select name="key3" id="key3" class="f_select" style="width:210px;" > -->
+<%-- 							<option value="0" <c:if test="${key3 eq '0' }">selected</c:if>>全部</option> --%>
+<%-- 							<c:forEach items="${specialtys}" var="sss"> --%>
+								
+<%-- 							<option value="${sss.code}" <c:if test="${key3 eq sss.code }">selected</c:if>>${sss.name}</option> --%>
+							
+<%-- 							</c:forEach> --%>
+<!-- 						</select> -->
+<!-- 					</td> -->
 					<td class="content_L" width="77%" align="left">
 						<c:if test="${xy:hasPermission(user.id,'hk',1)}">
 							<input type="button" class="f_btn01" value="查询" onclick="submit()">
@@ -111,7 +122,8 @@
 					<td class="title" align="center" class="content_L">考生号</td>
 					<td class="title" align="center" class="content_L">准考证号</td>
 					<td class="title" align="center" class="content_L">身份证号</td>
-					<td class="title" align="center" class="content_L">报考专业</td>
+					<td class="title" align="center" class="content_L">报考专业1</td>
+<!-- 					<td class="title" align="center" class="content_L">报考专业2</td> -->
 					<td class="title" align="center" class="content_L">语文</td>
 					<td class="title" align="center" class="content_L">数学</td>
 					<td class="title" align="center" class="content_L">英语</td>
@@ -153,6 +165,9 @@
 							<td align="center" class="content_L">
 								${score.specialtyId.name}
 							</td>
+<!-- 							<td align="center" class="content_L"> -->
+<%-- 								${score.specialtyId2.name} --%>
+<!-- 							</td> -->
 							<td align="center" class="content_L">
 							<c:choose>
 								<c:when test="${my:endsWith(score.yuwen,'.0')}">

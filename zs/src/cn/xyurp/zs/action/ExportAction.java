@@ -23,6 +23,7 @@ import cn.xyurp.system.util.MyConstants;
 import cn.xyurp.system.util.ProjectException;
 import cn.xyurp.zs.bean.BYLB;
 import cn.xyurp.zs.bean.DQ;
+import cn.xyurp.zs.bean.KL;
 import cn.xyurp.zs.bean.KSLB;
 import cn.xyurp.zs.bean.KSLX;
 import cn.xyurp.zs.bean.MZ;
@@ -31,6 +32,7 @@ import cn.xyurp.zs.bean.XB;
 import cn.xyurp.zs.bean.ZZMM;
 import cn.xyurp.zs.service.BYLBService;
 import cn.xyurp.zs.service.DQService;
+import cn.xyurp.zs.service.KLService;
 import cn.xyurp.zs.service.KSLBService;
 import cn.xyurp.zs.service.KSLXService;
 import cn.xyurp.zs.service.MZService;
@@ -48,6 +50,7 @@ public class ExportAction extends BaseAction {
 	private BYLBService bylbService;
 	private KSLBService kslbService;
 	private KSLXService kslxService;
+	private KLService klService;
 	private ScoreService ss;
 	private String fileName = "";
 	private String condition;
@@ -155,145 +158,156 @@ public class ExportAction extends BaseAction {
 					Score o = (Score) dataList.get(i);
 					HSSFRow row1 = sheet.createRow((short) (i + 1));// 建立新行
 					for (int j = 0; j < headers.length; j++) {
-						if ("KSH".equals(headers[j])) {
+						if ("考生号".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o
 											.getExamineeNum());
-						} else if ("ZKZH".equals(headers[j])) {
+						} else if ("准考证号".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o
 											.getAdmissionId());
-						} else if ("XM".equals(headers[j])) {
+						} else if ("姓名".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getName());
-						} else if ("XBDM".equals(headers[j])) {
+						} else if ("性别".equals(headers[j])) {
 							XB xb = xbService.find(MyConstants.StringToInt(o
 									.getSex()));
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, xb.getXbdm());
-						} else if ("CSNY".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, xb.getXbmc());
+						} else if ("出生年月".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getBirthday());
-						} else if ("ZZMMDM".equals(headers[j])) {
+						} else if ("政治面貌".equals(headers[j])) {
 							ZZMM zzmm = zzmmService.find(MyConstants
 									.StringToInt(o.getPolitics()));
 							this
 									.createCell(row1, j, style2,
 											HSSFCell.CELL_TYPE_STRING, zzmm
-													.getZzmmdm());
-						} else if ("MZDM".equals(headers[j])) {
+													.getZzmmmc());
+						} else if ("民族".equals(headers[j])) {
 							MZ mz = mzService.find(MyConstants.StringToInt(o
 									.getNationality()));
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, mz.getMzdm());
-						} else if ("KSLBDM".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, mz.getMzmc());
+						} else if ("考生类别".equals(headers[j])) {
 							KSLB kslb = kslbService.find(MyConstants
 									.StringToInt(o.getExamineeType()));
 							this
 									.createCell(row1, j, style2,
 											HSSFCell.CELL_TYPE_STRING, kslb
-													.getKslbdm());
-						} else if ("BYLBDM".equals(headers[j])) {
+													.getKslbmc());
+						} else if ("毕业类别".equals(headers[j])) {
 							BYLB bylb = bylbService.find(MyConstants
 									.StringToInt(o.getGraduationType()));
 							this
 									.createCell(row1, j, style2,
 											HSSFCell.CELL_TYPE_STRING, bylb
-													.getBylbdm());
-						} else if ("KLDM".equals(headers[j])) {
+													.getBylbmc());
+						} else if ("科类".equals(headers[j])) {
+							KL kl = klService.find(MyConstants.StringToInt(o.getKl()));
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, o.getKl());
-						} else if ("ZXMC".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, kl.getKlmc());
+						} else if ("中学".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getSchool());
-						} else if ("DQDM".equals(headers[j])) {
+						} else if ("地区".equals(headers[j])) {
 								DQ dq = dqService.find(MyConstants.StringToInt(o.getArea()));
 								this.createCell(row1, j, style2,
-										HSSFCell.CELL_TYPE_STRING, dq.getDqdm());
-						} else if ("SFZH".equals(headers[j])) {
+										HSSFCell.CELL_TYPE_STRING, dq.getDqmc());
+						} else if ("身份证号".equals(headers[j])) {
 							this
 									.createCell(row1, j, style2,
 											HSSFCell.CELL_TYPE_STRING, o
 													.getIDCardNum());
-						} else if ("JTDZ".equals(headers[j])) {
+						} else if ("家庭地址".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getAddress());
-						} else if ("YZBM".equals(headers[j])) {
+						} else if ("邮政编码".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getPostCode());
-						} else if ("LXDH".equals(headers[j])) {
+						} else if ("联系电话".equals(headers[j])) {
 							this
 									.createCell(row1, j, style2,
 											HSSFCell.CELL_TYPE_STRING, o
 													.getLinkPhone());
-						} else if ("HKKH".equals(headers[j])) {
+						} else if ("会考考号".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getHkkh());
-						} else if ("KSTC".equals(headers[j])) {
+						} else if ("考生特长".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getHobby());
-						} else if ("KSJLHCF".equals(headers[j])) {
+						} else if ("考生奖励或处罚".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getRewards()
 											+ "  " + o.getDisposal());
-						} else if ("ZSYJ".equals(headers[j])) {
+						} else if ("自我鉴定".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getZwjd());
-						} else if ("KSLX".equals(headers[j])) {
+						} else if ("考试类型".equals(headers[j])) {
 								KSLX kslx = kslxService.find(MyConstants
 										.StringToInt(o.getKslx()));
 								this
 										.createCell(row1, j, style2,
 												HSSFCell.CELL_TYPE_STRING, kslx
-														.getKslxdm());
-						} else if ("CJR".equals(headers[j])) {
+														.getKslxmc());
+						} else if ("收件人".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o
 											.getLetterName());
-						} else if ("CJ".equals(headers[j])) {
-							Double cj = (o.getBjyw() + o.getBjsx() + o.getBjyy())+ (o.getHkzongfen()+ (o.getTechangcj() + o.getZonghecj())+ o.getFushicj());
+						} else if ("总成绩".equals(headers[j])) {
+							Double cj = (o.getBjyw() + o.getBjsx() + o.getBjyy())*0.2+ o.getCs()*0.6+o.getFushicj();
 							String fenshu = String.valueOf(cj);
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, fenshu);
-						} else if ("LQZY".equals(headers[j])) {
+						} else if ("录取专业".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o
 											.getSpecialtyId().getName());
-						} else if ("ZYDH1".equals(headers[j])) {
+						} else if ("专业代码".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o
 											.getSpecialtyId().getCode());
-						} else if ("YUWEN".equals(headers[j])) {
+						} else if ("语文".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getBjyw());
-						} else if ("SHUXUE".equals(headers[j])) {
+						} else if ("数学".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getBjsx());
-						} else if ("YINGYU".equals(headers[j])) {
+						} else if ("英语".equals(headers[j])) {
 							this.createCell(row1, j, style2,
 									HSSFCell.CELL_TYPE_STRING, o.getBjyy());
-						} else if ("HKCJ".equals(headers[j])) {
+						} else if ("报考专业第一志愿".equals(headers[j])) {
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, o.getHkzongfen());
-						} else if ("ZHCJ".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, o.getSpecialtyId().getName());
+						} else if ("报考专业第二志愿".equals(headers[j])) {
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, o.getZonghecj());
-						} else if ("TCCJ".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, o.getSpecialtyId2()==null?"":o.getSpecialtyId2().getName());
+						} else if ("笔试总成绩".equals(headers[j])) {
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, o.getTechangcj());
-						} else if ("CSCJ".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, ""+(o.getBjyw() + o.getBjsx() + o.getBjyy()));
+						} else if ("笔试计算成绩".equals(headers[j])) {
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, o.getCs());
-						} else if ("FSCJ".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, ""+(o.getBjyw() + o.getBjsx() + o.getBjyy()));
+						} else if ("面试成绩".equals(headers[j])) {
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, o.getFushicj());
-						} else if ("CSCJHZ".equals(headers[j])) {
+									HSSFCell.CELL_TYPE_STRING, ""+o.getCs());
+						} else if ("证书成绩".equals(headers[j])) {
 							Double cscj = (o.getBjyw()+o.getBjsx()+o.getBjyy()+o.getHkzongfen()+o.getZonghecj()+o.getTechangcj()+o.getCs());
 							String csfenshu = String.valueOf(cscj);
 							this.createCell(row1, j, style2,
-									HSSFCell.CELL_TYPE_STRING, csfenshu);
-						}else {
-
+									HSSFCell.CELL_TYPE_STRING, o.getZonghecj());
+						}else if("高级中等教育阶段成绩".equals(headers[j])){
+							this.createCell(row1, j, style2,
+									HSSFCell.CELL_TYPE_STRING, ""+o.getHkzongfen());
+						}else if("推介及证明材料加分成绩".equals(headers[j])){
+							this.createCell(row1, j, style2,
+									HSSFCell.CELL_TYPE_STRING, ""+o.getFushicj());
+						}else if("申请".equals(headers[j])){
+							this.createCell(row1, j, style2,
+									HSSFCell.CELL_TYPE_STRING, ""+o.getIfcredit());
+						}else if("特长测试成绩".equals(headers[j])){
+							this.createCell(row1, j, style2,
+									HSSFCell.CELL_TYPE_STRING, ""+o.getTechangcj()==null?"":o.getTechangcj());
 						}
 					}
 				}
@@ -421,4 +435,8 @@ public class ExportAction extends BaseAction {
 		this.key = key;
 	}
 
+	public void setKlService(KLService klService) {
+		this.klService = klService;
+	}
+	
 }
